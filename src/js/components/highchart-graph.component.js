@@ -1,7 +1,5 @@
 class HighchartGraphCtrl {
   constructor() {
-    'ngInject';
-
     let Highcharts = require('highcharts');
 
     // this.data provided by bindings
@@ -12,7 +10,7 @@ class HighchartGraphCtrl {
 
 let HighchartGraph = {
   bindings: {
-    data: '='
+    data: '<'
   },
   controller: HighchartGraphCtrl,
   templateUrl: 'components/highchart-graph.html'
