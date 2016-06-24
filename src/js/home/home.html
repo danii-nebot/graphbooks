@@ -1,6 +1,13 @@
  <div class="container main">
+   <h2>{{ ::$ctrl.appName }} TODO:</h2>
+   <p>everything! :P</p>
 
-   <highchart-graph class="graph" data="$ctrl.data"></highchart-graph>
-
-   <h2>{{ ::$ctrl.appName }} TODO:</h2> everything! :P
+   <ul>
+     <li>
+       <a href="" ng-click="$ctrl.goto('graph')">Graph</a>
+     </li>
+     <li>
+       <a href="" ng-click="$ctrl.goto('about')">About</a>
+     </li>
+   </ul>
 </div>
