@@ -10,11 +10,13 @@ import './config/app.templates';
 // Import our app functionality
 import './home';
 import './layout';
+import './components';
 
 // Create and bootstrap application
 const requires = [
   'ui.router',
   'templates',
+  'app.components',
   'app.layout',
   'app.home'
 ];
