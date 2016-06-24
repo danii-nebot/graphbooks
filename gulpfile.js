@@ -9,10 +9,12 @@ var rename        = require('gulp-rename');
 var templateCache = require('gulp-angular-templatecache');
 var uglify        = require('gulp-uglify');
 var merge         = require('merge-stream');
+var sass          = require('gulp-sass');
 
 // Where our files are located
 var jsFiles   = "src/js/**/*.js";
 var viewFiles = "src/js/**/*.html";
+var sassFiles = "src/assets/css/*.scss"
 
 var interceptErrors = function(error) {
   var args = Array.prototype.slice.call(arguments);
@@ -46,6 +48,12 @@ gulp.task('html', function() {
       .pipe(gulp.dest('./build/'));
 });
 
+gulp.task('sass', function () {
+  return gulp.src(sassFiles)
+    .pipe(sass().on('error', interceptErrors))
+    .pipe(gulp.dest('./build'));
+});
+
 gulp.task('views', function() {
   return gulp.src(viewFiles)
       .pipe(templateCache({
@@ -58,18 +66,21 @@ gulp.task('views', function() {
 
 // This task is used for building production ready
 // minified JS/CSS files into the dist/ folder
-gulp.task('build', ['html', 'browserify'], function() {
+gulp.task('build', ['html', 'sass', 'browserify'], function() {
   var html = gulp.src("build/index.html")
                  .pipe(gulp.dest('./dist/'));
+
+  var css = gulp.src("build/main.css")
+                .pipe(gulp.dest('./dist/'));
 
   var js = gulp.src("build/main.js")
                .pipe(uglify())
                .pipe(gulp.dest('./dist/'));
 
-  return merge(html,js);
+  return merge(html,css, js);
 });
 
-gulp.task('default', ['html', 'browserify'], function() {
+gulp.task('default', ['html', 'sass', 'browserify'], function() {
 
   browserSync.init(['./build/**/**.**'], {
     server: "./build",
@@ -82,5 +93,6 @@ gulp.task('default', ['html', 'browserify'], function() {
 
   gulp.watch("src/index.html", ['html']);
   gulp.watch(viewFiles, ['views']);
+  gulp.watch(sassFiles, ['sass']);
   gulp.watch(jsFiles, ['browserify']);
 });

@@ -1,0 +1,28 @@
+$footer-bg-color: #f5f5f5;
+$footer-height: 70px;
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: $footer-height;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: $footer-height;
+  background-color: $footer-bg-color;
+
+  .container {
+    /* is this right? */
+    margin: $footer-height/3 0;
+    line-height: $footer-height/3;
+    span, a {
+      vertical-align: middle;
+    }
+  }
+}
