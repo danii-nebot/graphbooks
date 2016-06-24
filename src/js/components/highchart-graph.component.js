@@ -3,6 +3,7 @@ class HighchartGraphCtrl {
     let Highcharts = require('highcharts');
 
     // this.data provided by bindings
+    this.data.chart = this.data.chart || {};
     this.data.chart.renderTo = 'graph';
     let chart = new Highcharts.Chart(this.data);
   }

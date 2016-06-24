@@ -2,28 +2,41 @@ export default class GraphCtrl {
   constructor() {
     // 'ngInject';
 
-    // mock data from example at http://www.highcharts.com/docs/getting-started/your-first-chart
+    // mock data from example at http://www.highcharts.com/demo/combo-regression/grid
     this.data = {
-        chart: {
-            type: 'bar'
-        },
-        title: {
-            text: 'Fruit Consumption'
+        legend: {
+            enabled: false
         },
         xAxis: {
-            categories: ['Apples', 'Bananas', 'Oranges']
+            min: -0.5,
+            max: 5.5
         },
         yAxis: {
-            title: {
-                text: 'Fruit eaten'
-            }
+            min: 0
+        },
+        title: {
+            text: 'Scatter plot with regression line'
         },
         series: [{
-            name: 'Jane',
-            data: [1, 0, 4]
+            type: 'line',
+            name: 'Regression Line',
+            data: [[0, 1.11], [5, 4.51]],
+            marker: {
+                enabled: false
+            },
+            states: {
+                hover: {
+                    lineWidth: 0
+                }
+            },
+            enableMouseTracking: false
         }, {
-            name: 'John',
-            data: [5, 7, 3]
+            type: 'scatter',
+            name: 'Observations',
+            data: [1, 1.5, 2.8, 3.5, 3.9, 5, 4.2],
+            marker: {
+                radius: 4
+            }
         }]
     };
 
