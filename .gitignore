@@ -1,3 +1,6 @@
+# Secret
+.apiKey
+
 # Logs
 logs
 *.log

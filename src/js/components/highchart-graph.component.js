@@ -9,6 +9,16 @@ class HighchartGraphCtrl {
     this.data.legend = this.data.legend || {};
     this.data.legend.enabled = this.legend;
 
+    // TODO: should this be here?
+    this.data.tooltip = {
+      formatter: function() {
+        return '<b>'+ this.point.data.title +'</b><br/>'+
+               'Year: ' + this.point.x +'<br/>'+
+               'Rating:' + this.point.y + '<br/>'+
+               'Votes: ' + this.point.data.numVotes + '<br/>';
+      }
+    }
+
     let chart = new Highcharts.Chart(this.data);
   }
 }

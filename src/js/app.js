@@ -12,6 +12,7 @@ import './config/app.templates';
 // Import our app functionality
 import './layout';
 import './components';
+import './services';
 import './home';
 import './graph';
 import './about';
@@ -21,6 +22,7 @@ const requires = [
   'ui.router',
   'templates',
   'app.components',
+  'app.services',
   'app.layout',
   'app.home',
   'app.graph',
