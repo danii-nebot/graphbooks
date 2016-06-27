@@ -1,8 +1,11 @@
 export default class GraphCtrl {
-  constructor(GraphData) {
+  constructor(GraphData, $stateParams) {
     'ngInject';
 
-    this.data = GraphData.get('game-of-thrones');
+    GraphData.get($stateParams.slug).then(
+      (data) => this.data = data,
+      (err) => this.error = err
+    )
 
   }
 }

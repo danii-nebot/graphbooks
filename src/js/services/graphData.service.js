@@ -65,6 +65,7 @@ export default class GraphService {
         ]
     };
 
-    return mockData;
+    // return mock promise
+    return this._$q.when(mockData);
   }
 }
