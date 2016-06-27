@@ -1,3 +1,8 @@
 <div class="container main">
-  <highchart-graph class="graph" data="$ctrl.data" legend="false"></highchart-graph>
+  <div class="alert alert-danger" role="alert" ng-if="::$ctrl.error">
+    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+    &nbsp;<span ng-bind="::$ctrl.error"></span>
+  </div>
+
+  <highchart-graph ng-if="::!$ctrl.error" class="graph" data="::$ctrl.data" legend="false"></highchart-graph>
 </div>
