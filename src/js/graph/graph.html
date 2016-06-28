@@ -1,8 +1,8 @@
-<highchart-graph ng-if="::!$ctrl.error" class="graph" data="::$ctrl.series.graph" legend="false"></highchart-graph>
+<highchart-graph class="graph" data="::$ctrl.series.graph" legend="false"></highchart-graph>
 
 <div class="container main">
   <div class="container">
-    <div class="row" ng-if="::!$ctrl.error">
+    <div class="row">
       <div class="col-lg-4 col-lg-offset-3">
         <a target="_blank" ng-href="{{ ::$ctrl.series.seriesLink }}"><h1 class="" ng-bind="::$ctrl.series.title"></h1></a>
         <p><span ng-bind="::$ctrl.series.rating"></span>/5 based on <span ng-bind="::$ctrl.series.numRatings"></span> ratings</p>
