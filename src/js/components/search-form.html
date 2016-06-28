@@ -1,0 +1,11 @@
+<form ng-submit="$ctrl.submit()">
+  <fieldset class="form-group">
+    <ng-transclude></ng-transclude>
+    <input class="form-control form-control-lg"
+           type="text"
+           placeholder="Enter series name"
+           ng-model="$ctrl.formData.seriesName" />
+    <button class="btn btn-xs btn-primary pull-xs-right" type="submit"
+            ng-class="{disabled: !$ctrl.formData.seriesName }">Go!</button>
+  </fieldset>
+</form>

@@ -23,7 +23,7 @@ class HighchartGraphCtrl {
       let chart = new Highcharts.Chart(this.data);
     }
   }
-}
+};
 
 let HighchartGraph = {
   bindings: {
