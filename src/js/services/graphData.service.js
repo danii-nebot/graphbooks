@@ -7,12 +7,7 @@ export default class SeriesDataService {
     this._$q = $q;
   }
 
-  get(series) {
-    // check for slug first
-    if(!series) {
-      return this._$q.reject('Series slug is empty');
-    }
-
+  get(slug) {
     // TODO: wire up our own API point
     // return this._$http({
     //   method: 'GET',

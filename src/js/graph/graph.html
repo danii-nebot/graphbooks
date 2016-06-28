@@ -1,9 +1,6 @@
 <highchart-graph ng-if="::!$ctrl.error" class="graph" data="::$ctrl.series.graph" legend="false"></highchart-graph>
 
 <div class="container main">
-  <div class="alert alert-danger" role="alert" ng-if="::$ctrl.error">
-    <i class="ion-alert-circled"></i> 
-    &nbsp;<span ng-bind="::$ctrl.error"></span>
   <div class="container">
     <div class="row" ng-if="::!$ctrl.error">
       <div class="col-lg-4 col-lg-offset-3">

@@ -16,6 +16,7 @@ import './services';
 import './home';
 import './graph';
 import './about';
+import './error';
 
 // Create and bootstrap application
 const requires = [
@@ -26,7 +27,8 @@ const requires = [
   'app.layout',
   'app.home',
   'app.graph',
-  'app.about'
+  'app.about',
+  'app.error'
 ];
 
 // Mount on window for testing
