@@ -4,7 +4,7 @@ import angular from 'angular';
 let servicesModule = angular.module('app.services', []);
 
 // Services
-import GraphData from './graphData.service';
-servicesModule.service('GraphData', GraphData);
+import SeriesData from './graphData.service';
+servicesModule.service('SeriesData', SeriesData);
 
 export default servicesModule;

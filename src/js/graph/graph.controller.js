@@ -1,5 +1,5 @@
 export default class GraphCtrl {
-  constructor(GraphData, $stateParams) {
+  constructor(SeriesData, $stateParams) {
     'ngInject';
 
     GraphData.get($stateParams.slug).then(

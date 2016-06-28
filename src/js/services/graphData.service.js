@@ -1,4 +1,4 @@
-export default class GraphService {
+export default class SeriesDataService {
   constructor(AppConstants, $http, $q) {
     'ngInject';
 
@@ -20,7 +20,15 @@ export default class GraphService {
     // }).then( (res) => res.data.article )
 
     // mock data manually collected from relevant pages at Goodreads
-    let mockData = {
+    let mockData =
+    {
+      title: 'A Song of Ice and Fire (Game of Thrones)',
+      rating: 4.5,
+      numRatings: 1232,
+      seriesLink: 'https://www.goodreads.com/series/43790',
+      imageUrl: 'https://d.gr-assets.com/books/1326125793m/1151568.jpg',
+      graph :
+      {
         xAxis: {
             min: 1995,
             max: 2012
@@ -63,6 +71,7 @@ export default class GraphService {
             }
           }
         ]
+      }
     };
 
     // return mock promise
