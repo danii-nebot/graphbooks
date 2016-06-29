@@ -10,7 +10,7 @@
   },
   "scripts": {
     "start": "node ./bin/www",
-    "test": "mocha ./server/test/spec.js"
+    "test": "mocha ./server/test/spec.js -w app.js ./server/test/spec.js"
   },
   "dependencies": {
     "angular": "^1.5.7",
