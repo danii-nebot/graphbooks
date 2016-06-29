@@ -21,3 +21,25 @@ describe('Requests to the root path', function() {
     .expect(/src="main.js"/, done);
   });
 });
+
+describe('Listing data on /api/series', function() {
+
+   it('Returns 200 status code', function(done) {
+     request(app)
+     .get('/api/series')
+     .expect(200, done);
+   });
+
+   it('Returns JSON format', function(done) {
+     request(app)
+     .get('/api/series')
+     .expect('Content-Type', /json/, done);
+   });
+
+  //  TODO: how to test for actual production data?
+   it('Returns series mock data', function(done) {
+     request(app)
+     .get('/api/series')
+     .expect(JSON.stringify(app.mockSeriesData), done);
+   });
+ });
