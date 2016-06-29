@@ -1,9 +1,13 @@
 {
   "name": "graphbooks",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A visualization tool which graphs scifi and fantasy book ratings by series, inspired by http://graphtv.kevinformatics.com/",
   "author": "danii-nebot",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/danii-nebot/graphbooks.git"
+  },
   "scripts": {
     "start": "node ./bin/www"
   },
