@@ -18,9 +18,11 @@ export default class SeriesDataService {
     let mockData =
     {
       title: 'A Song of Ice and Fire (Game of Thrones)',
+      author: 'George RR Martin',
       rating: 4.5,
       numRatings: 1232,
       seriesLink: 'https://www.goodreads.com/series/43790',
+      authorLink: 'https://www.goodreads.com/author/show/346732.George_R_R_Martin',
       imageUrl: 'https://d.gr-assets.com/books/1326125793m/1151568.jpg',
       graph :
       {
@@ -30,6 +32,7 @@ export default class SeriesDataService {
         },
         yAxis: {
             min: 3.98,
+            max: 5.00,
             title: {
               text: 'Ratings'
             }
