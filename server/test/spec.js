@@ -37,9 +37,31 @@ describe('Listing data on /api/series', function() {
    });
 
   //  TODO: how to test for actual production data?
-   it('Returns series mock data', function(done) {
+   it('Returns series list mock data', function(done) {
      request(app)
      .get('/api/series')
-     .expect(JSON.stringify(app.mockSeriesData), done);
+     .expect(JSON.stringify(app.mockSeriesListData), done);
    });
  });
+
+ describe('Returning series data on /api/series/:slug', function() {
+
+    it('Returns 200 status code', function(done) {
+      request(app)
+      .get('/api/series/asdf')
+      .expect(200, done);
+    });
+
+    it('Returns JSON format', function(done) {
+      request(app)
+      .get('/api/series/asdf')
+      .expect('Content-Type', /json/, done);
+    });
+
+   //  TODO: how to test for actual production data?
+    it('Returns series mock data', function(done) {
+      request(app)
+      .get('/api/series/asdf')
+      .expect(JSON.stringify(app.mockSeriesData), done);
+    });
+  });
