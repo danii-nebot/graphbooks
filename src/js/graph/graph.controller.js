@@ -1,21 +1,11 @@
 export default class GraphCtrl {
-  constructor(SeriesData, $state, $stateParams) {
+  constructor(seriesData, $rootScope, $state) {
     'ngInject';
 
-    if(!$stateParams.slug) {
-      $state.go('app.error.404');
-    } else {
-
-      SeriesData.get($stateParams.slug).then(
-        (data) => {
-          if(!(this.series = data)) {
-            $state.go('app.error.404');
-          }
-        },
-        (err) => $state.go('app.error.500')
-      )
+    // Update the title of this page
+    if(seriesData && seriesData.info) {
+      this.series = seriesData;
+      $rootScope.setPageTitle('Graph ' + this.series.info.title);
     }
-
-
   }
 }
