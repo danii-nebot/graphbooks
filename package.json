@@ -24,6 +24,7 @@
     "browser-sync": "^2.13.0",
     "browserify": "^13.0.1",
     "browserify-ngannotate": "^2.0.0",
+    "cors": "^2.7.1",
     "gulp": "^3.9.1",
     "gulp-angular-templatecache": "^2.0.0",
     "gulp-notify": "^2.2.0",
