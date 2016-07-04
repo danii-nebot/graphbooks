@@ -3,15 +3,17 @@ class HighchartGraphCtrl {
     if(this.data) {
       let Highcharts = require('highcharts');
 
-      // this.data, this.legend provided by bindings
-      this.data.chart = this.data.chart || {};
-      this.data.chart.renderTo = 'graph';
+      let graphOptions = this.createGraphOptions(this.data);
 
-      this.data.legend = this.data.legend || {};
-      this.data.legend.enabled = this.legend;
+      // this.data, this.legend provided by bindings
+      graphOptions.chart = graphOptions.chart || {};
+      graphOptions.chart.renderTo = 'graph';
+
+      graphOptions.legend = graphOptions.legend || {};
+      graphOptions.legend.enabled = this.legend;
 
       // TODO: should this be here?
-      this.data.tooltip = {
+      graphOptions.tooltip = {
         formatter: function() {
           return '<b>'+ this.point.data.title +'</b><br/>'+
           'Year: ' + this.point.x +'<br/>'+
@@ -20,9 +22,54 @@ class HighchartGraphCtrl {
         }
       }
 
-      let chart = new Highcharts.Chart(this.data);
+      let chart = new Highcharts.Chart(graphOptions);
     }
   }
+
+  createGraphOptions(data) {
+    let options = {
+      xAxis: {
+        min: data.xAxisMin,
+        max: data.xAxisMax
+      },
+      yAxis: {
+        min: data.yAxisMin,
+        max: 5.00,
+        title: {
+          text: 'Ratings'
+        }
+      },
+      title: {
+        text: data.title
+      },
+      series: [
+        {
+          type: 'line',
+          name: 'Regression Line for Series',
+          data: data.regressionData,
+          marker: {
+            enabled: false
+          },
+          states: {
+            hover: {
+              lineWidth: 0
+            }
+          },
+          enableMouseTracking: false
+        },
+        {
+          type: 'scatter',
+          name: 'Books in Series',
+          data: data.data,
+          marker: {
+            radius: 4
+          }
+        }
+      ]
+    }
+    return options;
+  }
+
 };
 
 let HighchartGraph = {
