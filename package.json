@@ -17,6 +17,8 @@
     "angular-ui-router": "^0.3.1",
     "cors": "^2.7.1",
     "express": "^4.14.0",
+    "express-graphql": "^0.5.3",
+    "graphql": "^0.6.0",
     "highcharts": "^4.2.5"
   },
   "devDependencies": {
