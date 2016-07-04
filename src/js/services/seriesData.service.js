@@ -10,70 +10,21 @@ export default class SeriesDataService {
   getList() {
     return this._$http({
       method: 'GET',
-      url: this._AppConstants.api + '/series',
+      url: this._AppConstants.api + 'graphql?query={seriesList{title}}',
     }).then( (res) => res.data )
   }
 
-  get(slug) {
+  // this is still pretty much a mock
+  get(id) {
     // check for slug first
-    if(!slug) {
+    if(!id) {
       return this._$q.reject({ status: 404, statusText:'Series slug is empty' });
     }
 
     return this._$http({
       method: 'GET',
-      url: this._AppConstants.api + '/series/' + slug,
-    }).then( (res) => {
-      // TODO: I'm sure this shouldn't be here
-      let mockData =
-      {
-        info: res.data.info,
-        graph :
-        {
-          xAxis: {
-            min: res.data.graph.xAxisMin,
-            max: res.data.graph.xAxisMax
-          },
-          yAxis: {
-            min: res.data.graph.yAxisMin,
-            max: 5.00,
-            title: {
-              text: 'Ratings'
-            }
-          },
-          title: {
-            text: res.data.info.title
-          },
-          series: [
-            {
-              type: 'line',
-              name: 'Regression Line for Series',
-              // this is obviously made up
-              data: res.data.graph.regressionData,
-              marker: {
-                enabled: false
-              },
-              states: {
-                hover: {
-                  lineWidth: 0
-                }
-              },
-              enableMouseTracking: false
-            },
-            {
-              type: 'scatter',
-              name: 'Books in Series',
-              data: res.data.graph.data,
-              marker: {
-                radius: 4
-              }
-            }
-          ]
-        }
-      };
-
-      return mockData;
-    })
-
+      url: this._AppConstants.api +
+      'graphql?query={series(id:0){title, seriesLink, authors, authorsLink, rating, numRatings, graph{xAxisMin, xAxisMax, yAxisMin, yAxisMax, data{x,y,data{title,numVotes}}, regressionData}}}'
+    }).then( (res) => res.data.data.series)
   }
 }

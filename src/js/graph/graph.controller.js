@@ -3,9 +3,9 @@ export default class GraphCtrl {
     'ngInject';
 
     // Update the title of this page
-    if(seriesData && seriesData.info) {
+    if(seriesData) {
       this.series = seriesData;
-      $rootScope.setPageTitle('Graph ' + this.series.info.title);
+      $rootScope.setPageTitle('Graph ' + this.series.title);
     }
   }
 }
