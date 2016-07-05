@@ -25,7 +25,7 @@ describe('Requests to the root path', function() {
   });
 });
 
-var graphqlQuery = '/graphql?query={series(id:1){title, graph{regressionData}}}';
+var graphqlQuery = '/graphql?query={series(slug:"foundation"){title, graph{regressionData}}}';
 describe('Returning mock data on ' + graphqlQuery, function() {
   it('Returns 200 status code', function(done) {
     request(app)

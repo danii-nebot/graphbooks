@@ -61,12 +61,14 @@ var schema = new graphql.GraphQLSchema({
         type: seriesType,
         // `args` describes the arguments that the `series` query accepts
         args: {
-          id: { type: graphql.GraphQLInt }
+          slug: { type: graphql.GraphQLString }
         },
         // The resolve function describes how to "resolve" or fulfill
         // the incoming query.
         resolve: function (_, args) {
-          return data[args.id];
+          return data.find( element => {
+              return element.slug === args.slug;
+          });
         }
       }
     }
