@@ -3,15 +3,21 @@
 <div class="container main">
   <div class="row">
     <div class="col-lg-5 col-lg-offset-3">
-      <a target="_blank" ng-href="{{ ::$ctrl.series.seriesLink }}"><h1 class="" ng-bind="::$ctrl.series.title"></h1></a>
-      <a target="_blank" ng-href="{{ ::$ctrl.series.authorLink }}"><h2 class="" ng-bind="::$ctrl.series.author"></h2></a>
+      <a target="_blank" ng-href="{{ ::$ctrl.series.seriesLink }}"><h1 class="title" ng-bind="::$ctrl.series.title"></h1></a> by
+      <!--  TODO: style -->
+      <ul class="author-list">
+        <li class="author-list-item" ng-repeat="author in ::$ctrl.series.authors">
+          <!--  TODO: fix shcema -->
+          <a target="_blank" ng-href="{{ ::$ctrl.series.authorsLink[$index] }}"><h2 class="author" ng-bind="::author"></h2></a>
+        </li>
+      </ul>
       <p><span ng-bind="::$ctrl.series.rating"></span>/5 based on <span ng-bind="::$ctrl.series.numRatings"></span> ratings</p>
       <p><a target="_blank" ng-href="{{ ::$ctrl.series.seriesLink }}">See the list of books on Goodreads</a></p>
       <!-- TODO -->
       <p>Share this page on: TWITTER FB</p>
     </div>
     <div class="col-lg-1">
-      <!--  TODO: style properly-->
+      <!--  TODO: style properly -->
       <img class="" ng-src="{{::$ctrl.series.imageUrl}}">
     </div>
   </div>

@@ -6,13 +6,11 @@ function GraphConfig($stateProvider) {
     url: '/graph/:slug',
     controller: 'GraphCtrl as $ctrl',
     templateUrl: 'graph/graph.html',
-    title: 'Graph'
-    ,
+    title: 'Graph',
     resolve: {
       seriesData: function (SeriesData, $state, $stateParams) {
         return SeriesData.get($stateParams.slug).then(
           (data) => data,
-          // TODO: error handling?
           (err) => {
             if(err.status === 404) {
               $state.go('app.error.404');
