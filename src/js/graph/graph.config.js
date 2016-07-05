@@ -10,7 +10,11 @@ function GraphConfig($stateProvider) {
     resolve: {
       seriesData: function (SeriesData, $state, $stateParams) {
         return SeriesData.get($stateParams.slug).then(
-          (data) => data,
+          (data) => {
+            // GraphQL will always return 200 OK
+            if(data) return data;
+            $state.go('app.error.404');
+          },
           (err) => {
             if(err.status === 404) {
               $state.go('app.error.404');
