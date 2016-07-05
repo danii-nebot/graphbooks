@@ -9,7 +9,7 @@ class SearchFormCtrl {
   submit() {
     if(this.formData.seriesName) {
       // TODO: get slug from name
-      this._$state.go('app.graph', {slug:'placeholder'});
+      this._$state.go('app.graph', { slug: this.formData.seriesName });
     }
   }
 
