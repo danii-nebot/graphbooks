@@ -24,8 +24,8 @@ class SearchFormCtrl {
 
   submit() {
     if(this.formData.seriesName) {
-      let slug = this.formData.slug || this.slugify(this.formData.seriesName);
-      this._$state.go('app.graph', {slug: slug});
+      // TODO: get slug from name
+      this._$state.go('app.graph', { slug: this.formData.seriesName });
     }
   };
 

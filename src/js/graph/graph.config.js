@@ -6,7 +6,25 @@ function GraphConfig($stateProvider) {
     url: '/graph/:slug',
     controller: 'GraphCtrl as $ctrl',
     templateUrl: 'graph/graph.html',
-    title: 'Graph'
+    title: 'Graph',
+    resolve: {
+      seriesData: function (SeriesData, $state, $stateParams) {
+        return SeriesData.get($stateParams.slug).then(
+          (data) => {
+            // GraphQL will always return 200 OK
+            if(data) return data;
+            $state.go('app.error.404');
+          },
+          (err) => {
+            if(err.status === 404) {
+              $state.go('app.error.404');
+            } else {
+              $state.go('app.error.500');
+            }
+          }
+        )
+      }
+    } // end resolve
   });
 
 };

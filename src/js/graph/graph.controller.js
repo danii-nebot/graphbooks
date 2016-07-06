@@ -1,21 +1,66 @@
 export default class GraphCtrl {
-  constructor(SeriesData, $state, $stateParams) {
+  constructor(seriesData, $rootScope, $state) {
     'ngInject';
 
-    if(!$stateParams.slug) {
-      $state.go('app.error.404');
-    } else {
+    if(seriesData) {
+      this.series = seriesData;
+      this.graphData = this.createGraphOptions(seriesData.graph, seriesData.title);
+      // Update the title of this page
+      $rootScope.setPageTitle(`GraphBooks - ${this.series.title}`);
+    }
+  }
 
-      SeriesData.get($stateParams.slug).then(
-        (data) => {
-          if(!(this.series = data)) {
-            $state.go('app.error.404');
-          }
+  createGraphOptions(data, title) {
+    let options = {
+      xAxis: {
+        min: data.xAxisMin,
+        max: data.xAxisMax
+      },
+      yAxis: {
+        min: data.yAxisMin,
+        max: 5.00,
+        title: {
+          text: 'Ratings'
+        }
+      },
+      title: {
+        text: title
+      },
+      series: [
+        {
+          type: 'line',
+          name: 'Regression Line for Series',
+          data: data.regressionData,
+          marker: {
+            enabled: false
+          },
+          states: {
+            hover: {
+              lineWidth: 0
+            }
+          },
+          enableMouseTracking: false
         },
-        (err) => $state.go('app.error.500')
-      )
+        {
+          type: 'scatter',
+          name: 'Books in Series',
+          data: data.data,
+          marker: {
+            radius: 4
+          }
+        }
+      ],
+      tooltip: {
+        formatter: function() {
+          return `<b>${this.point.data.title}</b><br/>
+          Year: ${this.point.x}<br/>
+          Rating: ${this.point.y}<br/>
+          Votes: ${this.point.data.numVotes}<br/>`;
+        }
+      }
     }
 
-
+    return options;
   }
+
 }

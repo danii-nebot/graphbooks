@@ -1,12 +1,24 @@
 {
   "name": "graphbooks",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A visualization tool which graphs scifi and fantasy book ratings by series, inspired by http://graphtv.kevinformatics.com/",
   "author": "danii-nebot",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/danii-nebot/graphbooks.git"
+  },
+  "scripts": {
+    "start": "node ./bin/www",
+    "test": "mocha ./server/test/spec.js -w app.js ./server/test/spec.js"
+  },
   "dependencies": {
     "angular": "^1.5.7",
     "angular-ui-router": "^0.3.1",
+    "cors": "^2.7.1",
+    "express": "^4.14.0",
+    "express-graphql": "^0.5.3",
+    "graphql": "^0.6.0",
     "highcharts": "^4.2.5"
   },
   "devDependencies": {
@@ -23,6 +35,8 @@
     "gulp-uglify": "^1.5.4",
     "gulp-util": "^3.0.7",
     "merge-stream": "^1.0.0",
+    "mocha": "^2.5.3",
+    "supertest": "^1.2.0",
     "vinyl-source-stream": "^1.1.0"
   }
 }
