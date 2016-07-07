@@ -2,7 +2,7 @@
 <div class="input-group">
   <!-- classes ui-select-match & ui-select-choices required to fix https://github.com/angular-ui/ui-select/issues/1325 -->
   <ui-select ng-model="$ctrl.selectedItem" reset-search-input="false">
-    <ui-select-match class="ui-select-match" placeholder="Type your favourite sci-fi series or author...">
+    <ui-select-match class="ui-select-match" placeholder="Enter your favourite sci-fi/fantasy series or author...">
         <span ng-bind="$select.selected.title"></span>
     </ui-select-match>
     <ui-select-choices class="ui-select-choices" refresh="$ctrl.checkSearch($select.search)" refresh-delay="50"
