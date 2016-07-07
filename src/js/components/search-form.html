@@ -1,21 +1,11 @@
 <ng-transclude></ng-transclude>
-<form ng-submit="$ctrl.submit()">
-  <div class="input-group">
-    <input class="form-control"
-           type="text"
-           placeholder="Enter series name"
-           ng-focus="$ctrl.reset()"
-           ng-model="$ctrl.formData.seriesName" />
-    <span class="input-group-btn">
-      <button class="btn btn-s btn-primary pull-xs-right" type="submit"
-              ng-class="{disabled: !$ctrl.formData.seriesName }">Go!</button>
-    </span>
-  </div>
-  <div ng-if="$ctrl.formData.seriesName && $ctrl.autocompleteActive">
-    <ul>
-      <li ng-repeat="item in $ctrl.series | filter: $ctrl.formData.seriesName" ng-click="$ctrl.select(item)">
-        <span ng-bind="::item.title"></span>
-      </li>
-    </ul>
-  </div>
-</form>
+
+<!-- classes ui-select-match & ui-select-choices required to fix https://github.com/angular-ui/ui-select/issues/1325 -->
+<ui-select ng-model="$ctrl.selectedItem" theme="bootstrap">
+  <ui-select-match class="ui-select-match">
+      <span ng-bind="$select.selected.title"></span>
+  </ui-select-match>
+  <ui-select-choices class="ui-select-choices" repeat="book in ($ctrl.series | filter: $select.search) track by book.slug">
+      <span ng-bind="::book.title"></span>
+  </ui-select-choices>
+</ui-select>
