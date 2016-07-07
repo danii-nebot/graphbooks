@@ -3,7 +3,6 @@ class SearchFormCtrl {
     'ngInject';
 
     this._$state = $state;
-    this.formData = {};
 
     this.series = [
       { title: 'A Song of Ice and Fire', author: 'George RR Martin', keywords: 'Game of Thrones', slug:'a-song-of-ice-and-fire'},
@@ -13,9 +12,8 @@ class SearchFormCtrl {
   };
 
   submit() {
-    if(this.formData.seriesName) {
-      // TODO: get slug from name
-      this._$state.go('app.graph', { slug: this.formData.seriesName });
+    if(this.selectedItem) {
+      this._$state.go('app.graph', { slug: this.selectedItem.slug });
     }
   };
 }

@@ -9,3 +9,8 @@
       <span ng-bind="::book.title"></span>
   </ui-select-choices>
 </ui-select>
+<span class="input-group-btn">
+  <button class="btn btn-s btn-primary pull-xs-right" type="submit"
+          ng-class="{disabled: !$ctrl.selectedItem }"
+          ng-click="$ctrl.submit()">Go!</button>
+</span>
