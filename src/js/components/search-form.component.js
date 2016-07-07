@@ -3,6 +3,7 @@ class SearchFormCtrl {
     'ngInject';
 
     this._$state = $state;
+    this.limitSeriesSearch = 0;
 
     this.series = [
       { title: 'A Song of Ice and Fire', author: 'George RR Martin', keywords: 'Game of Thrones', slug:'a-song-of-ice-and-fire'},
@@ -10,6 +11,11 @@ class SearchFormCtrl {
       { title: 'Wheel of Time', author: 'Robert Jordan', slug: 'wheel-of-time'}
     ];
   };
+
+  // https://github.com/angular-ui/ui-select/issues/88#issuecomment-179916133
+  checkSearch(search) {
+    this.limitSeriesSearch = (search.length > 1)? 9999 : 0;
+  }
 
   submit() {
     if(this.selectedItem) {
