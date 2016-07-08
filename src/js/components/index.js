@@ -1,6 +1,7 @@
 import angular from 'angular';
+import uiselect from './uiselect';
 
-let componentsModule = angular.module('app.components', []);
+let componentsModule = angular.module('app.components', [uiselect]);
 
 import HighchartGraph from './highchart-graph.component';
 componentsModule.component('highchartGraph', HighchartGraph);

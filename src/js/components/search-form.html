@@ -1,13 +1,19 @@
 <ng-transclude></ng-transclude>
-<form ng-submit="$ctrl.submit()">
-  <div class="input-group">
-    <input class="form-control"
-           type="text"
-           placeholder="Enter series name"
-           ng-model="$ctrl.formData.seriesName" />
-    <span class="input-group-btn">
-      <button class="btn btn-s btn-primary pull-xs-right" type="submit"
-              ng-class="{disabled: !$ctrl.formData.seriesName }">Go!</button>
-    </span>
-  </fieldset>
-</form>
+<div class="input-group">
+  <!-- classes ui-select-match & ui-select-choices required to fix https://github.com/angular-ui/ui-select/issues/1325 -->
+  <ui-select ng-model="$ctrl.selectedItem" reset-search-input="false">
+    <ui-select-match class="ui-select-match" placeholder="Enter your favourite sci-fi/fantasy series or author...">
+        <span ng-bind="$select.selected.title"></span>
+    </ui-select-match>
+    <ui-select-choices class="ui-select-choices" refresh="$ctrl.checkSearch($select.search)" refresh-delay="50"
+      repeat="book in ($ctrl.series | filter: $select.search | limitTo: $ctrl.limitSeriesSearch) track by book.slug">
+        <span ng-bind="book.title"></span>
+        <small>by {{ book.author }}</small>
+    </ui-select-choices>
+  </ui-select>
+  <span class="input-group-btn">
+    <button class="btn btn-s btn-primary pull-xs-right" type="submit"
+            ng-class="{disabled: !$ctrl.selectedItem }"
+            ng-click="$ctrl.submit()"><i class="ion-stats-bars"></i></button>
+  </span>
+</div>
