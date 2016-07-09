@@ -51,11 +51,19 @@ export default class GraphCtrl {
         }
       ],
       tooltip: {
+        useHTML: true,
         formatter: function() {
-          return `<b>${this.point.data.title}</b><br/>
-          Year: ${this.point.x}<br/>
-          Rating: ${this.point.y}<br/>
-          Votes: ${this.point.data.numVotes}<br/>`;
+          return `<div class="tooltip-container">
+          <div>
+            <b>${this.point.data.title}</b><br/>
+            Year: ${this.point.x}<br/>
+            Rating: ${this.point.y}<br/>
+            Votes: ${this.point.data.numVotes}<br/>
+          </div>
+          <div class="tooltip-image">
+            <img src="${this.point.data.imageUrl}"/>
+          </div>
+          </div>`;
         }
       }
     }

@@ -40,9 +40,42 @@ footer {
   }
 }
 
+a {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+img.poster {
+  height: 150px;
+  margin: 20px auto;
+}
+
+span.stat-number {
+  font-size: 18px;
+}
+
+span.author-list-item {
+  display: inline-block;
+  font-size: 22px;
+}
 .ui-select-placeholder.text-muted {
   color: #999;
 }
+
+.tooltip-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tooltip-image {
+  margin-left: 10px;
+  img {
+    height: 85px;
+  }
+}
+
 /*!
  * ui-select
  * http://github.com/angular-ui/ui-select
