@@ -22,7 +22,7 @@ export default class SeriesDataService {
 
     return this._$http({
       method: 'GET',
-      url: `${this._AppConstants.api}/graphql?query={series(slug:"${slug}"){title, seriesLink, authors, authorsLink, rating, numRatings, graph{xAxisMin, xAxisMax, yAxisMin, yAxisMax, data{x,y,data{title,numVotes}}, regressionData}}}`
+      url: `${this._AppConstants.api}/graphql?query={series(slug:"${slug}"){title, seriesUrl, imageUrl, authors{name, url}, rating, numRatings, graph{xAxisMin, xAxisMax, yAxisMin, yAxisMax, data{x,y,data{title, numVotes, imageUrl}}, regressionData}}}`
     }).then( (res) => res.data.data.series)
   }
 }

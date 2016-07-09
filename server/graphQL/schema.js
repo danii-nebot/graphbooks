@@ -10,7 +10,8 @@ var bookDataType = new graphql.GraphQLObjectType({
       name: 'bookPointsData',
       fields: {
         title:    { type: graphql.GraphQLString },
-        numVotes: { type: graphql.GraphQLInt }
+        numVotes: { type: graphql.GraphQLInt },
+        imageUrl: { type: graphql.GraphQLString }
       }
     })
   }}
@@ -28,17 +29,24 @@ var graphDataType = new graphql.GraphQLObjectType({
   }
 });
 
+var authorType = new graphql.GraphQLObjectType({
+  name: 'Author',
+  fields: {
+    name: { type: graphql.GraphQLString },
+    url: { type: graphql.GraphQLString }
+  }
+});
+
 var seriesType = new graphql.GraphQLObjectType({
   name: 'Series',
   fields: {
     title:        { type: graphql.GraphQLString },
-    authors:      { type: new graphql.GraphQLList(graphql.GraphQLString) },
-    authorsLink:  { type: new graphql.GraphQLList(graphql.GraphQLString) },
+    authors:      { type: new graphql.GraphQLList(authorType) },
     keywords:     { type: graphql.GraphQLString },
     slug:         { type: graphql.GraphQLString },
     rating:       { type: graphql.GraphQLInt},
     numRatings:   { type: graphql.GraphQLInt},
-    seriesLink:   { type: graphql.GraphQLString },
+    seriesUrl:   { type: graphql.GraphQLString },
     imageUrl:     { type: graphql.GraphQLString },
     graph:         { type: graphDataType }
   }
