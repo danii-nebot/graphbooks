@@ -51,6 +51,23 @@ img.poster {
   margin: 20px auto;
 }
 
+ul.social-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+li.social-item {
+  color: black;
+  &:hover {
+      color: #4F8EF7;
+  }
+  width: 33px;
+  font-size: 25px;
+  list-style-type: none;
+  text-align: center;
+}
+
 span.stat-number {
   font-size: 18px;
 }
