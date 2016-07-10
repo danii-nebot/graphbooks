@@ -11,11 +11,12 @@ var uglify        = require('gulp-uglify');
 var merge         = require('merge-stream');
 var sass          = require('gulp-sass');
 var del           = require('del');
+var concat        = require('gulp-concat');
 
 // Where our files are located
-var jsFiles   = "src/js/**/*.js";
-var viewFiles = "src/js/**/*.html";
-var sassFiles = "src/assets/css/*.scss"
+var jsFiles       = 'src/js/**/*.js';
+var viewFiles     = 'src/js/**/*.html';
+var sassFiles     = ['src/assets/css/*.scss', 'src/js/**/*.scss'];
 var distDir       = './build/';
 
 var interceptErrors = function(error) {
@@ -30,7 +31,6 @@ var interceptErrors = function(error) {
   // Keep gulp from hanging on this task
   this.emit('end');
 };
-
 
 gulp.task('browserify', ['views'], function() {
   return browserify('./src/js/app.js')
@@ -63,6 +63,7 @@ gulp.task('html', function() {
 gulp.task('sass', function () {
   return gulp.src(sassFiles)
     .pipe(sass().on('error', interceptErrors))
+    .pipe(concat('main.css'))
     .pipe(gulp.dest('./build'));
 });
 
