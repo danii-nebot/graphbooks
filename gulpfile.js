@@ -10,11 +10,13 @@ var templateCache = require('gulp-angular-templatecache');
 var uglify        = require('gulp-uglify');
 var merge         = require('merge-stream');
 var sass          = require('gulp-sass');
+var del           = require('del');
 
 // Where our files are located
 var jsFiles   = "src/js/**/*.js";
 var viewFiles = "src/js/**/*.html";
 var sassFiles = "src/assets/css/*.scss"
+var distDir       = './build/';
 
 var interceptErrors = function(error) {
   var args = Array.prototype.slice.call(arguments);
@@ -39,13 +41,23 @@ gulp.task('browserify', ['views'], function() {
       //Pass desired output filename to vinyl-source-stream
       .pipe(source('main.js'))
       // Start piping stream to tasks!
-      .pipe(gulp.dest('./build/'));
+      .pipe(gulp.dest(distDir));
+});
+
+gulp.task('clean', function () {
+  return del([
+    // we use a globbing pattern to match everything inside our dist folder
+    distDir + '**/*'
+    // ,
+    // in case we dont want to delete a file, we negate the pattern, ie
+    // '!dist/mobile/deploy.json'
+  ]);
 });
 
 gulp.task('html', function() {
   return gulp.src("src/index.html")
       .on('error', interceptErrors)
-      .pipe(gulp.dest('./build/'));
+      .pipe(gulp.dest(distDir));
 });
 
 gulp.task('sass', function () {
@@ -66,24 +78,24 @@ gulp.task('views', function() {
 
 // This task is used for building production ready
 // minified JS/CSS files into the dist/ folder
-gulp.task('build', ['html', 'sass', 'browserify'], function() {
-  var html = gulp.src("build/index.html")
-                 .pipe(gulp.dest('./dist/'));
+gulp.task('build', ['clean', 'html', 'sass', 'browserify'], function() {
+  var html = gulp.src(distDir + 'index.html')
+                 .pipe(gulp.dest(distDir));
 
-  var css = gulp.src("build/main.css")
-                .pipe(gulp.dest('./dist/'));
+  var css = gulp.src(distDir+'main.css')
+                .pipe(gulp.dest(distDir));
 
-  var js = gulp.src("build/main.js")
+  var js = gulp.src(distDir+'main.js')
                .pipe(uglify())
-               .pipe(gulp.dest('./dist/'));
+               .pipe(gulp.dest(distDir));
 
-  return merge(html,css, js);
+  return merge(html, css, js);
 });
 
-gulp.task('default', ['html', 'sass', 'browserify'], function() {
+gulp.task('default', ['clean', 'html', 'sass', 'browserify'], function() {
 
-  browserSync.init(['./build/**/**.**'], {
-    server: "./build",
+  browserSync.init([distDir+'**/**.**'], {
+    server: distDir,
     port: 4000,
     notify: false,
     ui: {
