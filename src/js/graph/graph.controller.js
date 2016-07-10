@@ -1,5 +1,5 @@
 export default class GraphCtrl {
-  constructor(seriesData, $rootScope, $state) {
+  constructor(seriesData, $rootScope, $state, $location) {
     'ngInject';
 
     if(seriesData) {
@@ -7,6 +7,9 @@ export default class GraphCtrl {
       this.graphData = this.createGraphOptions(seriesData.graph, seriesData.title);
       // Update the title of this page
       $rootScope.setPageTitle(`GraphBooks - ${this.series.title}`);
+      
+      // for share links
+      this.currentUrl = $location.absUrl();
     }
   }
 

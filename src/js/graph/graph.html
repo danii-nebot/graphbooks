@@ -3,7 +3,7 @@
 <div class="container main">
   <hr/>
   <div class="row">
-    <div class="col-lg-5 col-lg-offset-3">
+    <div class="col-md-6 col-md-offset-3">
       
       <a target="_blank" ng-href="{{ ::$ctrl.series.seriesUrl }}">
         <h1 class="title" ng-bind="::$ctrl.series.title"></h1>
@@ -17,24 +17,27 @@
       <p><span class="stat-number" ng-bind="::$ctrl.series.rating"></span>/5 based on <span class="stat-number" ng-bind="::$ctrl.series.numRatings"></span> ratings</p>
       
       <p><a target="_blank" ng-href="{{ ::$ctrl.series.seriesUrl }}">See the list of books on Goodreads</a></p>
-      
-      <hr/>
+    </div>
+    
+    <div class="col-md-1">
+      <img class="poster" ng-src="{{ ::$ctrl.series.imageUrl }}" />
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
       <p>
         Share this page on:
         <!-- TODO social links urls-->
         <ul class="social-list">
-          <a href="#"><li class="social-item"><i class="ion-social-facebook-outline"></i></li></a>
-          <a href="#"><li class="social-item"><i class="ion-social-twitter-outline"></i></li></a>
-          <a href="#"><li class="social-item"><i class="ion-social-googleplus-outline"></i></li></a>
+          <a ng-href="https://www.facebook.com/sharer/sharer.php?u={{ ::$ctrl.currentUrl }}"><li class="social-item"><i class="ion-social-facebook-outline"></i></li></a>
+          <a ng-href="https://twitter.com/intent/tweet?text={{ ::$ctrl.currentUrl }}"><li class="social-item"><i class="ion-social-twitter-outline"></i></li></a>
+          <a ng-href="https://plus.google.com/share?url={{ ::$ctrl.currentUrl }}"><li class="social-item"><i class="ion-social-googleplus-outline"></i></li></a>
         </ul>
       </p>
-    
-    </div>
-    
-    <div class="col-lg-1">
-      <img class="poster" ng-src="{{ ::$ctrl.series.imageUrl }}" />
     </div>
   </div>
+  
   <hr/>
   <div class="row">
     <div class="col-lg-6 col-lg-offset-3">
