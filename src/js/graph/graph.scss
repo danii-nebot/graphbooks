@@ -1,0 +1,26 @@
+span.stat-number {
+  font-size: 18px;
+}
+
+span.author-list-item {
+  display: inline-block;
+  font-size: 22px;
+}
+
+.tooltip-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tooltip-image {
+  margin-left: 10px;
+  img {
+    height: 85px;
+  }
+}
+
+img.poster {
+  height: 150px;
+  margin: 20px auto;
+}
