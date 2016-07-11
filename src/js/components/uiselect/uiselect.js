@@ -517,7 +517,7 @@ uis.controller('uiSelectCtrl',
 
   ctrl.setFocus = function(){
     ctrl.open = true;
-    
+
     $timeout(function(){
       ctrl.searchInput[0].focus();
     });
@@ -526,7 +526,7 @@ uis.controller('uiSelectCtrl',
   ctrl.clear = function($event) {
     ctrl.select(undefined);
     $event.stopPropagation();
-    
+
     $timeout(function(){
       ctrl.searchInput[0].focus();
     });
@@ -737,11 +737,13 @@ uis.directive('uiSelect',
     controllerAs: '$select',
     compile: function(tElement, tAttrs) {
 
+      var submitAttr = (angular.isDefined(tAttrs.submit))? 'submit' : '';
+
       //Multiple or Single depending if multiple attribute presence
       if (angular.isDefined(tAttrs.multiple))
         tElement.append("<ui-select-multiple/>").removeAttr('multiple');
       else
-        tElement.append("<ui-select-single/>");
+        tElement.append("<ui-select-single " + submitAttr + "/>");
 
       return function(scope, element, attrs, ctrls, transcludeFn) {
 
@@ -1458,6 +1460,11 @@ uis.directive('uiSelectSingle', ['$timeout','$compile', function($timeout, $comp
 
       scope.$on('uis:select', function (event, item) {
         $select.selected = item;
+        if(element[0].hasAttribute('submit')) {
+          $timeout(function() {
+            document.querySelector('button[type="submit"]').focus();
+          });
+        }
       });
     }
   };
