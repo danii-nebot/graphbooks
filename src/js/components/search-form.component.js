@@ -1,8 +1,9 @@
 class SearchFormCtrl {
-  constructor($state) {
+  constructor($state, $attrs) {
     'ngInject';
 
     this._$state = $state;
+    this.autofocus = $attrs.autofocus;
     this.limitSeriesSearch = 0;
 
     this.series = [

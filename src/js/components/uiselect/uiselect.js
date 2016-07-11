@@ -249,7 +249,6 @@ uis.controller('uiSelectCtrl',
   ctrl.disabled = false;
   ctrl.selected = undefined;
 
-  ctrl.focusser = undefined; //Reference to input element used to handle focus events
   ctrl.resetSearchInput = true;
   ctrl.multiple = undefined; // Initialized inside uiSelect directive link function
   ctrl.disableChoiceExpression = undefined; // Initialized inside uiSelectChoices directive link function
@@ -437,7 +436,6 @@ uis.controller('uiSelectCtrl',
     return isDisabled;
   };
 
-
   // When the user selects an item with ENTER or clicks the dropdown
   ctrl.select = function(item, skipFocusser, $event) {
     if (item === undefined || !item._uiSelectChoiceDisabled) {
@@ -518,13 +516,20 @@ uis.controller('uiSelectCtrl',
   };
 
   ctrl.setFocus = function(){
-    if (!ctrl.focus) ctrl.focusInput[0].focus();
+    ctrl.open = true;
+    
+    $timeout(function(){
+      ctrl.searchInput[0].focus();
+    });
   };
 
   ctrl.clear = function($event) {
     ctrl.select(undefined);
     $event.stopPropagation();
-    ctrl.focusser[0].focus();
+    
+    $timeout(function(){
+      ctrl.searchInput[0].focus();
+    });
   };
 
   // Toggle dropdown
@@ -745,8 +750,6 @@ uis.directive('uiSelect',
 
         $select.generatedId = uiSelectConfig.generateId();
         $select.baseTitle = attrs.title || 'Select box';
-        $select.focusserTitle = $select.baseTitle + ' focus';
-        $select.focusserId = 'focusser-' + $select.generatedId;
 
         $select.closeOnSelect = function() {
           if (angular.isDefined(attrs.closeOnSelect)) {
@@ -1456,73 +1459,6 @@ uis.directive('uiSelectSingle', ['$timeout','$compile', function($timeout, $comp
       scope.$on('uis:select', function (event, item) {
         $select.selected = item;
       });
-
-      scope.$on('uis:close', function (event, skipFocusser) {
-        $timeout(function(){
-          $select.focusser.prop('disabled', false);
-          if (!skipFocusser) $select.focusser[0].focus();
-        },0,false);
-      });
-
-      scope.$on('uis:activate', function () {
-        focusser.prop('disabled', true); //Will reactivate it on .close()
-      });
-
-      //Idea from: https://github.com/ivaynberg/select2/blob/79b5bf6db918d7560bdd959109b7bcfb47edaf43/select2.js#L1954
-      var focusser = angular.element("<input ng-disabled='$select.disabled' class='ui-select-focusser ui-select-offscreen' type='text' id='{{ $select.focusserId }}' aria-label='{{ $select.focusserTitle }}' aria-haspopup='true' role='button' />");
-      $compile(focusser)(scope);
-      $select.focusser = focusser;
-
-      //Input that will handle focus
-      $select.focusInput = focusser;
-
-      element.parent().append(focusser);
-      focusser.bind("focus", function(){
-        scope.$evalAsync(function(){
-          $select.focus = true;
-        });
-      });
-      focusser.bind("blur", function(){
-        scope.$evalAsync(function(){
-          $select.focus = false;
-        });
-      });
-      focusser.bind("keydown", function(e){
-
-        if (e.which === KEY.BACKSPACE) {
-          e.preventDefault();
-          e.stopPropagation();
-          $select.select(undefined);
-          scope.$apply();
-          return;
-        }
-
-        if (e.which === KEY.TAB || KEY.isControl(e) || KEY.isFunctionKey(e) || e.which === KEY.ESC) {
-          return;
-        }
-
-        if (e.which == KEY.DOWN  || e.which == KEY.UP || e.which == KEY.ENTER || e.which == KEY.SPACE){
-          e.preventDefault();
-          e.stopPropagation();
-          $select.activate();
-        }
-
-        scope.$digest();
-      });
-
-      focusser.bind("keyup input", function(e){
-
-        if (e.which === KEY.TAB || KEY.isControl(e) || KEY.isFunctionKey(e) || e.which === KEY.ESC || e.which == KEY.ENTER || e.which === KEY.BACKSPACE) {
-          return;
-        }
-
-        $select.activate(focusser.val()); //User pressed some regular key, so we pass it to the search input
-        focusser.val('');
-        scope.$digest();
-
-      });
-
-
     }
   };
 }]);
