@@ -11,12 +11,21 @@ body {
   margin-bottom: $footer-height;
 }
 
+.logo {
+  font-family: 'Pacifico', cursive;
+}
+
+
 footer {
   position: absolute;
   bottom: 0;
   width: 100%;
   // height: $footer-height;
   background-color: $footer-bg-color;
+
+  .logo {
+    font-size: 20px;
+  }
 
   .container {
     /* is this right? */
@@ -58,12 +67,12 @@ a {
   color: black;
   &:hover {
       color: $link-hover-color;
-      
+
       span {
         color: $link-hover-color;
-        
+
       }
-      
+
       span.bootstrap-icon {
         color: #FFF;
         background-color: $link-hover-color;

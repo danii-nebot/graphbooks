@@ -1,5 +1,5 @@
 const AppConstants = {
-  appName: 'graphbooks',
+  appName: 'GraphBooks',
   api: 'http://localhost:3000'
 };
 
