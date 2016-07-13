@@ -1,5 +1,4 @@
-$footer-bg-color: #f5f5f5;
-$footer-height: 70px;
+
 $link-hover-color: #4F8EF7;
 
 html {
@@ -7,34 +6,8 @@ html {
   min-height: 100%;
 }
 
-body {
-  margin-bottom: $footer-height;
-}
-
 .logo {
   font-family: 'Pacifico', cursive;
-}
-
-
-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  // height: $footer-height;
-  background-color: $footer-bg-color;
-
-  .logo {
-    font-size: 20px;
-  }
-
-  .container {
-    /* is this right? */
-    margin: $footer-height/3 0;
-    line-height: $footer-height/3;
-    span, a {
-      vertical-align: middle;
-    }
-  }
 }
 
 .main {

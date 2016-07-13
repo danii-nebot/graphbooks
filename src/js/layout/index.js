@@ -4,10 +4,8 @@ import angular from 'angular';
 let layoutModule = angular.module('app.layout', []);
 
 // Components
-
-// perhaps we'll add header later...
-// import AppHeader from './header.component';
-// layoutModule.component('appHeader', AppHeader);
+import AppHeader from './header.component';
+layoutModule.component('appHeader', AppHeader);
 
 import AppFooter from './footer.component';
 layoutModule.component('appFooter', AppFooter);
