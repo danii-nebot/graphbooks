@@ -14,7 +14,17 @@ export default class SeriesDataService {
     }).then( (res) => res.data )
   }
 
-  get(slug) {
+  getAuthor(slug) {
+    // check for slug first
+    if(!slug) {
+      return this._$q.reject({ status: 404, statusText:'Author slug is empty' });
+    }
+
+    // TODO!
+    // return all author books
+  }
+
+  getSeries(slug) {
     // check for slug first
     if(!slug) {
       return this._$q.reject({ status: 404, statusText:'Series slug is empty' });
