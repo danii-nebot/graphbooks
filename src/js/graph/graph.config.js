@@ -10,39 +10,37 @@ function GraphConfig($stateProvider) {
      params : { isAuthor: null, },
     resolve: {
       seriesData: function (SeriesData, $state, $stateParams) {
-
-        // TODO:
-        // if $stateParams.isAuthor
-        return seriesData.getAuthor($stateParams.slug).then(
-          (data) => {
-            // GraphQL will always return 200 OK
-            if(data) return data;
-            $state.go('app.error.404');
-          },
-          (err) => {
-            if(err.status === 404) {
+        if($stateParams.isAuthor) {
+          return seriesData.getAuthor($stateParams.slug).then(
+            (data) => {
+              // GraphQL will always return 200 OK
+              if(data) return data;
               $state.go('app.error.404');
-            } else {
-              $state.go('app.error.500');
+            },
+            (err) => {
+              if(err.status === 404) {
+                $state.go('app.error.404');
+              } else {
+                $state.go('app.error.500');
+              }
             }
-          }
-        )
-        // is series
-        // else
-        return SeriesData.getSeries($stateParams.slug).then(
-          (data) => {
-            // GraphQL will always return 200 OK
-            if(data) return data;
-            $state.go('app.error.404');
-          },
-          (err) => {
-            if(err.status === 404) {
-              $state.go('app.error.404');
-            } else {
-              $state.go('app.error.500');
-            }
-          }
-        )
+          )
+        } else {
+            return SeriesData.getSeries($stateParams.slug).then(
+              (data) => {
+                // GraphQL will always return 200 OK
+                if(data) return data;
+                $state.go('app.error.404');
+              },
+              (err) => {
+                if(err.status === 404) {
+                  $state.go('app.error.404');
+                } else {
+                  $state.go('app.error.500');
+                }
+              }
+            )
+        }
       }
     } // end resolve
   });
