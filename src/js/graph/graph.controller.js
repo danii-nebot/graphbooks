@@ -4,10 +4,11 @@ export default class GraphCtrl {
 
     if(seriesData) {
       this.series = seriesData;
-      this.graphData = this.createGraphOptions(seriesData.graph, seriesData.title);
+      let title = seriesData.title ? seriesData.title : `${seriesData.author.name}'s Bibliography`;
+      this.graphData = this.createGraphOptions(seriesData.graph, title);
       // Update the title of this page
-      $rootScope.setPageTitle(`GraphBooks - ${this.series.title}`);
-      
+      $rootScope.setPageTitle(`GraphBooks - ${title}`);
+
       // for share links
       this.currentUrl = $location.absUrl();
     }

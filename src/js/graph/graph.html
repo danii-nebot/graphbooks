@@ -5,18 +5,31 @@
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
 
-      <a target="_blank" ng-href="{{ ::$ctrl.series.seriesUrl }}">
-        <h1 class="title" ng-bind="::$ctrl.series.title"></h1>
-      </a>
-      by
-      <span class="author-list-item" ng-repeat="author in ::$ctrl.series.authors">
-        <span ng-if="$index > 0">, </span>
-        <a target="_blank" ng-href="{{ ::author.url }}" ng-bind="::author.name"></a>
-      </span>
+      <!--  Series graph -->
+      <div ng-if="::$ctrl.series.title">
+        <a target="_blank" ng-href="{{ ::$ctrl.series.seriesUrl }}">
+          <h1 class="title" ng-bind="::$ctrl.series.title"></h1>
+        </a>
+        by
+        <span class="author-list-item" ng-repeat="author in ::$ctrl.series.authors">
+          <span ng-if="$index > 0">, </span>
+          <a target="_blank" ng-href="{{ ::author.url }}" ng-bind="::author.name"></a>
+        </span>
+        <p>Average <span class="stat-number" ng-bind="::$ctrl.series.rating"></span>/5 based on <span class="stat-number" ng-bind="::$ctrl.series.numRatings"></span> ratings</p>
 
-      <p><span class="stat-number" ng-bind="::$ctrl.series.rating"></span>/5 based on <span class="stat-number" ng-bind="::$ctrl.series.numRatings"></span> ratings</p>
+        <p><a target="_blank" ng-href="{{ ::$ctrl.series.seriesUrl }}">See the list of books in this series on Goodreads</a></p>
+      </div>
 
-      <p><a target="_blank" ng-href="{{ ::$ctrl.series.seriesUrl }}">See the list of books on Goodreads</a></p>
+      <!--  Author graph -->
+      <div ng-if="::!$ctrl.series.title">
+        <a target="_blank" ng-href="{{ ::$ctrl.series.author.url }}">
+          <h1 class="title" ng-bind="::$ctrl.series.author.name"></h1>
+        </a>
+        <p>Average <span class="stat-number" ng-bind="::$ctrl.series.rating"></span>/5 based on <span class="stat-number" ng-bind="::$ctrl.series.numRatings"></span> ratings</p>
+
+        <p><a target="_blank" ng-href="{{ ::$ctrl.series.author.url }}">See {{ ::$ctrl.series.author.name}}'s full bibliography on Goodreads</a></p>
+      </div>
+
     </div>
 
     <div class="col-md-1">
