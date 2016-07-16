@@ -25,28 +25,56 @@ describe('Requests to the root path', function() {
   });
 });
 
-var graphqlQuery = '/graphql?query={series(slug:"foundation"){title, graph{regressionData}}}';
-describe('Returning mock data on ' + graphqlQuery, function() {
+var seriesGraphqlQuery = '/graphql?query={series(slug:"foundation"){title, graph{regressionData}}}';
+describe('Series endpoint: Returning mock data on ' + seriesGraphqlQuery, function() {
   it('Returns 200 status code', function(done) {
     request(app)
-    .get(graphqlQuery)
+    .get(seriesGraphqlQuery)
     .expect(200, done);
   });
 
   it('Returns JSON format', function(done) {
     request(app)
-    .get(graphqlQuery)
+    .get(seriesGraphqlQuery)
     .expect('Content-Type', /json/, done);
   });
 
   it('Returns series mock data', function(done) {
     request(app)
-    .get(graphqlQuery)
+    .get(seriesGraphqlQuery)
     .expect(JSON.stringify({ data: { series:
       {
-        "title": data[1].title,
-        "graph": { "regressionData": data[1].graph.regressionData }
+        "title": data.series[1].title,
+        "graph": { "regressionData": data.series[1].graph.regressionData }
       }
     }}), done);
   });
 });
+
+var authorGraphqlQuery = '/graphql?query={author(slug:"isaac-asimov"){author{name}, graph{regressionData}}}';
+describe('Author endpoint: Returning mock data on ' + authorGraphqlQuery, function() {
+  it('Returns 200 status code', function(done) {
+    request(app)
+    .get(authorGraphqlQuery)
+    .expect(200, done);
+  });
+
+  it('Returns JSON format', function(done) {
+    request(app)
+    .get(authorGraphqlQuery)
+    .expect('Content-Type', /json/, done);
+  });
+
+  it('Returns series mock data', function(done) {
+    request(app)
+    .get(authorGraphqlQuery)
+    .expect(JSON.stringify({ data: { author:
+      {
+        "author": { "name": data.authors[0].author.name },
+        "graph":  { "regressionData": data.authors[0].graph.regressionData }
+      }
+    }}), done);
+  });
+});
+
+// unit test series list endpoint too!!

@@ -1,50 +1,78 @@
-[
-  {
-    "title": "A Song of Ice and Fire (Game of Thrones)",
-    "authors": [
-      {
-        "name": "George RR Martin",
-        "url": "https://www.goodreads.com/author/show/346732.George_R_R_Martin"
-      }
-    ],
-    "keywords": "Game of Thrones",
-    "slug":"a-song-of-ice-and-fire",
-    "rating": 4.5,
-    "numRatings": 1232,
-    "seriesUrl": "https://www.goodreads.com/series/43790",
-    "imageUrl": "https://d.gr-assets.com/books/1326125793m/1151568.jpg",
-    "graph": {
-      "xAxisMin": 1995,
-      "xAxisMax": 2012,
-      "yAxisMin": 3.98,
-      "yAxisMax": 5,
-      "regressionData": [[1996, 4.11], [2011, 4.51]],
-      "data": [
-        {"x": 1996, "y": 4.44, "data": {"title": "A Game of Thrones", "numVotes": 121, "imageUrl": "https://d.gr-assets.com/books/1326125793m/1151568.jpg"}},
-        {"x": 1998, "y": 4.39, "data": {"title": "A Clash of Kings", "numVotes": 999, "imageUrl": "https://d.gr-assets.com/books/1326125793m/1151568.jpg" }},
-        {"x": 2000, "y": 4.54, "data": {"title": "A Storm of Swords", "numVotes": 11, "imageUrl": "https://d.gr-assets.com/books/1326125793m/1151568.jpg" }},
-        {"x": 2005, "y": 4.08, "data": {"title": "A Feast for Crows", "numVotes": 765, "imageUrl": "https://d.gr-assets.com/books/1326125793m/1151568.jpg" }},
-        {"x": 2011, "y": 4.29, "data": {"title": "A Dance with Dragons", "numVotes": 134, "imageUrl": "https://d.gr-assets.com/books/1326125793m/1151568.jpg" }}
-        ]
-      }
-    },
+{
+  "series": [
     {
-      "title": "Foundation",
-      "authors": [ {
+      "title": "A Song of Ice and Fire (Game of Thrones)",
+      "authors": [
+        {
+          "name": "George RR Martin",
+          "url": "https://www.goodreads.com/author/show/346732.George_R_R_Martin"
+        }
+      ],
+      "keywords": "Game of Thrones",
+      "slug":"a-song-of-ice-and-fire",
+      "rating": 4.5,
+      "numRatings": 1232,
+      "seriesUrl": "https://www.goodreads.com/series/43790",
+      "imageUrl": "https://d.gr-assets.com/books/1326125793m/1151568.jpg",
+      "graph": {
+        "xAxisMin": 1995,
+        "xAxisMax": 2012,
+        "yAxisMin": 3.98,
+        "yAxisMax": 5,
+        "regressionData": [[1996, 4.11], [2011, 4.51]],
+        "data": [
+          {"x": 1996, "y": 4.44, "data": {"title": "A Game of Thrones", "numVotes": 121, "imageUrl": "https://d.gr-assets.com/books/1326125793m/1151568.jpg"}},
+          {"x": 1998, "y": 4.39, "data": {"title": "A Clash of Kings", "numVotes": 999, "imageUrl": "https://d.gr-assets.com/books/1326125793m/1151568.jpg" }},
+          {"x": 2000, "y": 4.54, "data": {"title": "A Storm of Swords", "numVotes": 11, "imageUrl": "https://d.gr-assets.com/books/1326125793m/1151568.jpg" }},
+          {"x": 2005, "y": 4.08, "data": {"title": "A Feast for Crows", "numVotes": 765, "imageUrl": "https://d.gr-assets.com/books/1326125793m/1151568.jpg" }},
+          {"x": 2011, "y": 4.29, "data": {"title": "A Dance with Dragons", "numVotes": 134, "imageUrl": "https://d.gr-assets.com/books/1326125793m/1151568.jpg" }}
+          ]
+        }
+      },
+      {
+        "title": "Foundation",
+        "authors": [ {
+          "name": "Isaac Asimov",
+          "url": "https://www.goodreads.com/author/show/16667.Isaac_Asimov"
+        },
+        {
+          "name": "Brandon Sanderson",
+          "url": "http://www.goodreads.com/author/show/38550.Brandon_Sanderson"
+          }
+        ],
+        "keywords": "second, foundation, empire",
+        "slug":"foundation",
+        "rating": 4.7,
+        "numRatings": 99000,
+        "seriesUrl": "https://www.goodreads.com/series/59386-foundation-publication-order",
+        "imageUrl": "https://d.gr-assets.com/books/1431073586l/332040.jpg",
+        "graph": {
+          "xAxisMin": 1950,
+          "xAxisMax": 1987,
+          "yAxisMin": 3.95,
+          "yAxisMax": 5,
+          "regressionData": [[1951, 4.11], [1986, 4.51]],
+          "data": [
+            {"x": 1951, "y": 4.10, "data": {"title": "Foundation", "numVotes": 260718, "imageUrl": "https://d.gr-assets.com/books/1326125793m/1151568.jpg" }},
+            {"x": 1952, "y": 4.19, "data": {"title": "Foundation and Empire", "numVotes": 103872, "imageUrl": "https://d.gr-assets.com/books/1326125793m/1151568.jpg" }},
+            {"x": 1953, "y": 4.22, "data": {"title": "Second Foundation", "numVotes": 94848 , "imageUrl": "https://d.gr-assets.com/books/1326125793m/1151568.jpg" }},
+            {"x": 1982, "y": 4.05, "data": {"title": "Foundation's Edge", "numVotes": 44646, "imageUrl": "https://d.gr-assets.com/books/1326125793m/1151568.jpg" }},
+            {"x": 1986, "y": 4.01, "data": {"title": "Foundation and Earth", "numVotes": 38142, "imageUrl": "https://d.gr-assets.com/books/1326125793m/1151568.jpg" }}
+            ]
+          }
+      }
+  ],
+  "authors": [
+    {
+      "author": {
         "name": "Isaac Asimov",
         "url": "https://www.goodreads.com/author/show/16667.Isaac_Asimov"
       },
-      {
-        "name": "Brandon Sanderson",
-        "url": "http://www.goodreads.com/author/show/38550.Brandon_Sanderson"
-        }
-      ],
       "keywords": "second, foundation, empire",
-      "slug":"foundation",
+      "slug": "isaac-asimov",
       "rating": 4.7,
       "numRatings": 99000,
-      "seriesUrl": "https://www.goodreads.com/series/59386-foundation-publication-order",
-      "imageUrl": "https://d.gr-assets.com/books/1431073586l/332040.jpg",
+      "imageUrl": "https://d.gr-assets.com/authors/1341965730p5/16667.jpg",
       "graph": {
         "xAxisMin": 1950,
         "xAxisMax": 1987,
@@ -60,4 +88,6 @@
           ]
         }
     }
-]
+  ]
+
+}

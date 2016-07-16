@@ -33,7 +33,7 @@ var authorType = new graphql.GraphQLObjectType({
   name: 'Author',
   fields: {
     name: { type: graphql.GraphQLString },
-    url: { type: graphql.GraphQLString }
+    url:  { type: graphql.GraphQLString }
   }
 });
 
@@ -46,13 +46,26 @@ var seriesType = new graphql.GraphQLObjectType({
     slug:         { type: graphql.GraphQLString },
     rating:       { type: graphql.GraphQLInt},
     numRatings:   { type: graphql.GraphQLInt},
-    seriesUrl:   { type: graphql.GraphQLString },
+    seriesUrl:    { type: graphql.GraphQLString },
     imageUrl:     { type: graphql.GraphQLString },
-    graph:         { type: graphDataType }
+    graph:        { type: graphDataType }
   }
 });
 
 var seriesListType = new graphql.GraphQLList(seriesType);
+
+var bibliographyType = new graphql.GraphQLObjectType({
+  name: 'Bibliography',
+  fields: {
+    author:       { type: authorType },
+    keywords:     { type: graphql.GraphQLString },
+    slug:         { type: graphql.GraphQLString },
+    rating:       { type: graphql.GraphQLInt},
+    numRatings:   { type: graphql.GraphQLInt},
+    imageUrl:     { type: graphql.GraphQLString },
+    graph:        { type: graphDataType }
+  }
+});
 
 var schema = new graphql.GraphQLSchema({
   query: new graphql.GraphQLObjectType({
@@ -62,20 +75,29 @@ var schema = new graphql.GraphQLSchema({
         type: seriesListType,
         args: {},
         resolve: function (_, args) {
-          return data;
+          return data.series;
+        }
+      },
+      // this is probably awful :/
+      author: {
+        type: bibliographyType,
+        args: {
+          slug: { type: graphql.GraphQLString }
+        },
+        resolve: function(_, args) {
+          return data.authors.find( item => {
+            return item.slug === args.slug;
+          });
         }
       },
       series: {
         type: seriesType,
-        // `args` describes the arguments that the `series` query accepts
         args: {
           slug: { type: graphql.GraphQLString }
         },
-        // The resolve function describes how to "resolve" or fulfill
-        // the incoming query.
         resolve: function (_, args) {
-          return data.find( element => {
-              return element.slug === args.slug;
+          return data.series.find( item => {
+              return item.slug === args.slug;
           });
         }
       }
