@@ -10,7 +10,7 @@ class SearchFormCtrl {
       { name: 'A Song of Ice and Fire', author: ['George RR Martin'], keywords: 'Game of Thrones', slug:'a-song-of-ice-and-fire'},
       { name: 'Foundation', author: ['Isaac Asimov'], keywords: '', slug:'foundation'},
       { name: 'Wheel of Time', author: ['Robert Jordan', 'Brandon Sanderson'], slug: 'wheel-of-time'},
-      { name: 'Brandon Sanderson', slug: 'brandon-sanderson'}
+      { name: 'Isaac Asimov', slug: 'isaac-asimov'}
     ];
   };
 

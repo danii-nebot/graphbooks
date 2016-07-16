@@ -7,11 +7,13 @@ function GraphConfig($stateProvider) {
     controller: 'GraphCtrl as $ctrl',
     templateUrl: 'graph/graph.html',
     title: 'Graph',
-     params : { isAuthor: null, },
+    params : { isAuthor: null, },
     resolve: {
       seriesData: function (SeriesData, $state, $stateParams) {
+        // TODO:
+        // this doesnt work with deeplinking to Author's graph page :(
         if($stateParams.isAuthor) {
-          return seriesData.getAuthor($stateParams.slug).then(
+          return SeriesData.getAuthor($stateParams.slug).then(
             (data) => {
               // GraphQL will always return 200 OK
               if(data) return data;
@@ -24,22 +26,22 @@ function GraphConfig($stateProvider) {
                 $state.go('app.error.500');
               }
             }
-          )
+          );
         } else {
-            return SeriesData.getSeries($stateParams.slug).then(
-              (data) => {
-                // GraphQL will always return 200 OK
-                if(data) return data;
+          return SeriesData.getSeries($stateParams.slug).then(
+            (data) => {
+              // GraphQL will always return 200 OK
+              if(data) return data;
+              $state.go('app.error.404');
+            },
+            (err) => {
+              if(err.status === 404) {
                 $state.go('app.error.404');
-              },
-              (err) => {
-                if(err.status === 404) {
-                  $state.go('app.error.404');
-                } else {
-                  $state.go('app.error.500');
-                }
+              } else {
+                $state.go('app.error.500');
               }
-            )
+            }
+          );
         }
       }
     } // end resolve
