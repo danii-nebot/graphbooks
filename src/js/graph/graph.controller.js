@@ -3,8 +3,9 @@ export default class GraphCtrl {
     'ngInject';
 
     if(seriesData) {
-      this.series = seriesData;
-      let title = seriesData.title ? seriesData.title : `${seriesData.author.name}'s Bibliography`;
+      this.data = seriesData;
+      this.isSeries = !!seriesData.authors.length;
+      let title =  this.isSeries ? seriesData.name.name : `${seriesData.name.name}'s Bibliography`;
       this.graphData = this.createGraphOptions(seriesData.graph, title);
       // Update the title of this page
       $rootScope.setPageTitle(`GraphBooks - ${title}`);
