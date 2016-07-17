@@ -8,7 +8,7 @@
     <ui-select-choices class="ui-select-choices" refresh="$ctrl.checkSearch($select.search)" refresh-delay="50"
       repeat="item in ($ctrl.data | filter: $select.search | limitTo: $ctrl.limitSeriesSearch) track by item.slug">
         <span ng-bind="item.name"></span>
-        <small ng-if="item.author">by {{ item.author }}</small>
+        <small ng-if="item.author">by {{ ::item.author.join([separator = ', ']) }}</small>
     </ui-select-choices>
   </ui-select>
   <span class="input-group-btn">
