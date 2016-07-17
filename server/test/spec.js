@@ -25,28 +25,30 @@ describe('Requests to the root path', function() {
   });
 });
 
-var graphqlQuery = '/graphql?query={series(slug:"foundation"){title, graph{regressionData}}}';
-describe('Returning mock data on ' + graphqlQuery, function() {
+var seriesGraphqlQuery = '/graphql?query={graphData(slug:"foundation"){name{name}, graph{regressionData}}}';
+describe('Series endpoint: Returning mock data on ' + seriesGraphqlQuery, function() {
   it('Returns 200 status code', function(done) {
     request(app)
-    .get(graphqlQuery)
+    .get(seriesGraphqlQuery)
     .expect(200, done);
   });
 
   it('Returns JSON format', function(done) {
     request(app)
-    .get(graphqlQuery)
+    .get(seriesGraphqlQuery)
     .expect('Content-Type', /json/, done);
   });
 
   it('Returns series mock data', function(done) {
     request(app)
-    .get(graphqlQuery)
-    .expect(JSON.stringify({ data: { series:
+    .get(seriesGraphqlQuery)
+    .expect(JSON.stringify({ data: { graphData:
       {
-        "title": data[1].title,
+        "name": { "name" : data[1].name.name},
         "graph": { "regressionData": data[1].graph.regressionData }
       }
     }}), done);
   });
 });
+
+// unit test series list endpoint too!!

@@ -3,11 +3,13 @@ export default class GraphCtrl {
     'ngInject';
 
     if(seriesData) {
-      this.series = seriesData;
-      this.graphData = this.createGraphOptions(seriesData.graph, seriesData.title);
+      this.data = seriesData;
+      this.isSeries = !!seriesData.authors.length;
+      let title =  this.isSeries ? seriesData.name.name : `${seriesData.name.name}'s Bibliography`;
+      this.graphData = this.createGraphOptions(seriesData.graph, title);
       // Update the title of this page
-      $rootScope.setPageTitle(`GraphBooks - ${this.series.title}`);
-      
+      $rootScope.setPageTitle(`GraphBooks - ${title}`);
+
       // for share links
       this.currentUrl = $location.absUrl();
     }

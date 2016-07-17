@@ -6,10 +6,11 @@ class SearchFormCtrl {
     this.autofocus = $attrs.autofocus;
     this.limitSeriesSearch = 0;
 
-    this.series = [
-      { title: 'A Song of Ice and Fire', author: 'George RR Martin', keywords: 'Game of Thrones', slug:'a-song-of-ice-and-fire'},
-      { title: 'Foundation', author: 'Isaac Asimov', keywords: '', slug:'foundation'},
-      { title: 'Wheel of Time', author: 'Robert Jordan', slug: 'wheel-of-time'}
+    this.data = [
+      { name: 'A Song of Ice and Fire', author: ['George RR Martin'], keywords: 'Game of Thrones', slug:'a-song-of-ice-and-fire'},
+      { name: 'Foundation', author: ['Isaac Asimov'], keywords: '', slug:'foundation'},
+      { name: 'Wheel of Time', author: ['Robert Jordan', 'Brandon Sanderson'], slug: 'wheel-of-time'},
+      { name: 'Isaac Asimov', slug: 'isaac-asimov'}
     ];
   };
 
@@ -20,7 +21,7 @@ class SearchFormCtrl {
 
   submit() {
     if(this.selectedItem) {
-      this._$state.go('app.graph', { slug: this.selectedItem.slug });
+      this._$state.go('app.graph', { slug: this.selectedItem.slug, isAuthor: !this.selectedItem.author });
     }
   };
 }

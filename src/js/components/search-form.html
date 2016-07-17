@@ -3,12 +3,12 @@
   <!-- classes ui-select-match & ui-select-choices required to fix https://github.com/angular-ui/ui-select/issues/1325 -->
   <ui-select ng-model="$ctrl.selectedItem" reset-search-input="false" submit ng-attr-autofocus="{{ $ctrl.autofocus && 'autofocus' }}">
     <ui-select-match class="ui-select-match" placeholder="Enter your favourite sci-fi/fantasy series or author...">
-        <span ng-bind="$select.selected.title"></span>
+        <span ng-bind="$select.selected.name"></span>
     </ui-select-match>
     <ui-select-choices class="ui-select-choices" refresh="$ctrl.checkSearch($select.search)" refresh-delay="50"
-      repeat="book in ($ctrl.series | filter: $select.search | limitTo: $ctrl.limitSeriesSearch) track by book.slug">
-        <span ng-bind="book.title"></span>
-        <small>by {{ book.author }}</small>
+      repeat="item in ($ctrl.data | filter: $select.search | limitTo: $ctrl.limitSeriesSearch) track by item.slug">
+        <span ng-bind="item.name"></span>
+        <small ng-if="item.author">by {{ ::item.author.join([separator = ', ']) }}</small>
     </ui-select-choices>
   </ui-select>
   <span class="input-group-btn">

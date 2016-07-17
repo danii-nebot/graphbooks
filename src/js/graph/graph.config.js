@@ -7,9 +7,10 @@ function GraphConfig($stateProvider) {
     controller: 'GraphCtrl as $ctrl',
     templateUrl: 'graph/graph.html',
     title: 'Graph',
+    params : { isAuthor: null, },
     resolve: {
       seriesData: function (SeriesData, $state, $stateParams) {
-        return SeriesData.get($stateParams.slug).then(
+        return SeriesData.getGraph($stateParams.slug).then(
           (data) => {
             // GraphQL will always return 200 OK
             if(data) return data;
@@ -22,7 +23,7 @@ function GraphConfig($stateProvider) {
               $state.go('app.error.500');
             }
           }
-        )
+        );
       }
     } // end resolve
   });
