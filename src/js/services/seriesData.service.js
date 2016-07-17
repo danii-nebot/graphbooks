@@ -10,23 +10,11 @@ export default class SeriesDataService {
   getList() {
     return this._$http({
       method: 'GET',
-      url: `${this._AppConstants.api}/graphql?query={seriesList{title, slug}}`,
+      url: `${this._AppConstants.api}/graphql?query={list{name{name}, slug}}`,
     }).then( (res) => res.data )
   }
 
-  getAuthor(slug) {
-    // check for slug first
-    if(!slug) {
-      return this._$q.reject({ status: 404, statusText:'Author slug is empty' });
-    }
-
-    return this._$http({
-      method: 'GET',
-      url: `${this._AppConstants.api}/graphql?query={author(slug:"${slug}"){author{name, url}, imageUrl, rating, numRatings, graph{xAxisMin, xAxisMax, yAxisMin, yAxisMax, data{x,y,data{title, numVotes, imageUrl}}, regressionData}}}`
-    }).then( (res) => res.data.data.author)
-  }
-
-  getSeries(slug) {
+  getGraph(slug) {
     // check for slug first
     if(!slug) {
       return this._$q.reject({ status: 404, statusText:'Series slug is empty' });
@@ -34,7 +22,7 @@ export default class SeriesDataService {
 
     return this._$http({
       method: 'GET',
-      url: `${this._AppConstants.api}/graphql?query={series(slug:"${slug}"){title, seriesUrl, imageUrl, authors{name, url}, rating, numRatings, graph{xAxisMin, xAxisMax, yAxisMin, yAxisMax, data{x,y,data{title, numVotes, imageUrl}}, regressionData}}}`
-    }).then( (res) => res.data.data.series)
+      url: `${this._AppConstants.api}/graphql?query={graphData(slug:"${slug}"){name{name, url}, imageUrl, authors{name, url}, rating, numRatings, graph{xAxisMin, xAxisMax, yAxisMin, yAxisMax, data{x,y,data{title, numVotes, imageUrl}}, regressionData}}}`
+    }).then( (res) => res.data.data.graphData )
   }
 }
