@@ -13,7 +13,6 @@ function GraphConfig($stateProvider) {
         return SeriesData.getGraph($stateParams.slug).then(
           (data) => {
             // GraphQL will always return 200 OK
-            console.log(data, "!!!");
             if(data) return data;
             $state.go('app.error.404');
           },
