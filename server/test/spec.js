@@ -25,7 +25,7 @@ describe('Requests to the root path', function() {
   });
 });
 
-var seriesGraphqlQuery = '/graphql?query={series(slug:"foundation"){title, graph{regressionData}}}';
+var seriesGraphqlQuery = '/graphql?query={graphData(slug:"foundation"){name{name}, graph{regressionData}}}';
 describe('Series endpoint: Returning mock data on ' + seriesGraphqlQuery, function() {
   it('Returns 200 status code', function(done) {
     request(app)
@@ -42,36 +42,10 @@ describe('Series endpoint: Returning mock data on ' + seriesGraphqlQuery, functi
   it('Returns series mock data', function(done) {
     request(app)
     .get(seriesGraphqlQuery)
-    .expect(JSON.stringify({ data: { series:
+    .expect(JSON.stringify({ data: { graphData:
       {
-        "title": data.series[1].title,
-        "graph": { "regressionData": data.series[1].graph.regressionData }
-      }
-    }}), done);
-  });
-});
-
-var authorGraphqlQuery = '/graphql?query={author(slug:"isaac-asimov"){author{name}, graph{regressionData}}}';
-describe('Author endpoint: Returning mock data on ' + authorGraphqlQuery, function() {
-  it('Returns 200 status code', function(done) {
-    request(app)
-    .get(authorGraphqlQuery)
-    .expect(200, done);
-  });
-
-  it('Returns JSON format', function(done) {
-    request(app)
-    .get(authorGraphqlQuery)
-    .expect('Content-Type', /json/, done);
-  });
-
-  it('Returns series mock data', function(done) {
-    request(app)
-    .get(authorGraphqlQuery)
-    .expect(JSON.stringify({ data: { author:
-      {
-        "author": { "name": data.authors[0].author.name },
-        "graph":  { "regressionData": data.authors[0].graph.regressionData }
+        "name": { "name" : data[1].name.name},
+        "graph": { "regressionData": data[1].graph.regressionData }
       }
     }}), done);
   });

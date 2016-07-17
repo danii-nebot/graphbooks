@@ -1,11 +1,19 @@
 var graphql = require('graphql'),
     data = require('../static/data.json')
 
+var linkedNameType = new graphql.GraphQLObjectType({
+  name: 'LinkedName',
+  fields: {
+    name: { type: graphql.GraphQLString },
+    url:  { type: graphql.GraphQLString }
+  }
+});
+
 var bookDataType = new graphql.GraphQLObjectType({
   name: 'bookData',
   fields: {
-    x: { type: graphql.GraphQLFloat },
-    y: { type: graphql.GraphQLFloat },
+    x:    { type: graphql.GraphQLFloat },
+    y:    { type: graphql.GraphQLFloat },
     data: { type: new graphql.GraphQLObjectType({
       name: 'bookPointsData',
       fields: {
@@ -29,35 +37,11 @@ var graphDataType = new graphql.GraphQLObjectType({
   }
 });
 
-var authorType = new graphql.GraphQLObjectType({
-  name: 'Author',
+var itemType = new graphql.GraphQLObjectType({
+  name: 'Items',
   fields: {
-    name: { type: graphql.GraphQLString },
-    url:  { type: graphql.GraphQLString }
-  }
-});
-
-var seriesType = new graphql.GraphQLObjectType({
-  name: 'Series',
-  fields: {
-    title:        { type: graphql.GraphQLString },
-    authors:      { type: new graphql.GraphQLList(authorType) },
-    keywords:     { type: graphql.GraphQLString },
-    slug:         { type: graphql.GraphQLString },
-    rating:       { type: graphql.GraphQLInt},
-    numRatings:   { type: graphql.GraphQLInt},
-    seriesUrl:    { type: graphql.GraphQLString },
-    imageUrl:     { type: graphql.GraphQLString },
-    graph:        { type: graphDataType }
-  }
-});
-
-var seriesListType = new graphql.GraphQLList(seriesType);
-
-var bibliographyType = new graphql.GraphQLObjectType({
-  name: 'Bibliography',
-  fields: {
-    author:       { type: authorType },
+    name:        { type: linkedNameType },
+    authors:      { type: new graphql.GraphQLList(linkedNameType) },
     keywords:     { type: graphql.GraphQLString },
     slug:         { type: graphql.GraphQLString },
     rating:       { type: graphql.GraphQLInt},
@@ -66,37 +50,27 @@ var bibliographyType = new graphql.GraphQLObjectType({
     graph:        { type: graphDataType }
   }
 });
+
+var itemsListType = new graphql.GraphQLList(itemType);
 
 var schema = new graphql.GraphQLSchema({
   query: new graphql.GraphQLObjectType({
     name: 'Query',
     fields: {
-      seriesList: {
-        type: seriesListType,
+      list: {
+        type: itemsListType,
         args: {},
         resolve: function (_, args) {
-          return data.series;
+          return data;
         }
       },
-      // this is probably awful :/
-      author: {
-        type: bibliographyType,
-        args: {
-          slug: { type: graphql.GraphQLString }
-        },
-        resolve: function(_, args) {
-          return data.authors.find( item => {
-            return item.slug === args.slug;
-          });
-        }
-      },
-      series: {
-        type: seriesType,
+      graphData: {
+        type: itemType,
         args: {
           slug: { type: graphql.GraphQLString }
         },
         resolve: function (_, args) {
-          return data.series.find( item => {
+          return data.find( item => {
               return item.slug === args.slug;
           });
         }
