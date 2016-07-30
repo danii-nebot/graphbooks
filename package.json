@@ -28,6 +28,7 @@
     "browserify": "^13.0.1",
     "browserify-ngannotate": "^2.0.0",
     "del": "^2.2.1",
+    "goodreads": "git://github.com/danii-nebot/node-goodreads.git",
     "gulp": "^3.9.1",
     "gulp-angular-templatecache": "^2.0.0",
     "gulp-concat": "^2.6.0",
