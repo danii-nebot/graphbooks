@@ -1,5 +1,5 @@
 # Secret
-.apiKey
+server/goodreadsApiKey.js
 
 # Logs
 logs
