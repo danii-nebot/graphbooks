@@ -8,7 +8,15 @@ function AppConfig($httpProvider, $stateProvider, $locationProvider, $urlRouterP
   $stateProvider
   .state('app', {
     abstract: true,
-    templateUrl: 'layout/app-view.html'
+    templateUrl: 'layout/app-view.html',
+    resolve: {
+      seriesData: function (SeriesData, $state, $stateParams) {
+        return SeriesData.getList().then(
+          (data) => data,
+          (err) =>  $state.go('app.error.500')
+        )
+      }
+    } // end resolve
   });
 
   $urlRouterProvider.otherwise('/');

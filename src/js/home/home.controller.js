@@ -3,12 +3,6 @@ export default class HomeCtrl {
     'ngInject';
     this._$state = $state;
     this.appName = AppConstants.appName;
-
-    // testing data is here!
-    let list = SeriesData.getList();
-    list.then(
-      (data) => console.log(data)
-    )
   }
 
   goto(newState) {

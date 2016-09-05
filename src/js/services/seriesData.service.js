@@ -5,13 +5,34 @@ export default class SeriesDataService {
     this._AppConstants = AppConstants;
     this._$http = $http;
     this._$q = $q;
+    this._listData = [];
   }
 
+  getListData() {
+    return this._listData;
+  }
+
+  processList(list) {
+    return list.map(function(item) {
+      item.name = item.name.name;
+      if(item.authors) {
+        item.authors = item.authors.map(function(authors) {
+          return authors.name;
+        });
+      }
+      return item;
+    });
+  }
+
+  // TODO: bootstrap this!
   getList() {
     return this._$http({
       method: 'GET',
-      url: `${this._AppConstants.api}/graphql?query={list{name{name}, slug}}`,
-    }).then( (res) => res.data )
+      url: `${this._AppConstants.api}/graphql?query={list{name{name}, slug, authors{name}, keywords}}`,
+    }).then((res) => {
+      this._listData = this.processList(res.data.data.list);
+      return res.data;
+    })
   }
 
   getGraph(slug) {

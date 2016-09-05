@@ -1,17 +1,11 @@
 class SearchFormCtrl {
-  constructor($state, $attrs) {
+  constructor(SeriesData, $state, $attrs) {
     'ngInject';
 
     this._$state = $state;
     this.autofocus = $attrs.autofocus;
     this.limitSeriesSearch = 0;
-
-    this.data = [
-      { name: 'A Song of Ice and Fire', author: ['George RR Martin'], keywords: 'Game of Thrones', slug:'a-song-of-ice-and-fire'},
-      { name: 'Foundation', author: ['Isaac Asimov'], keywords: '', slug:'foundation'},
-      { name: 'Wheel of Time', author: ['Robert Jordan', 'Brandon Sanderson'], slug: 'wheel-of-time'},
-      { name: 'Isaac Asimov', slug: 'isaac-asimov'}
-    ];
+    this.data = SeriesData.getListData();
   };
 
   // https://github.com/angular-ui/ui-select/issues/88#issuecomment-179916133

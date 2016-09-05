@@ -1,0 +1,397 @@
+[
+  {
+    "name": {
+      "name": "Patrick Rothfuss",
+      "url": "http://www.goodreads.com/author/show/108424.Patrick_Rothfuss"
+    },
+    "authors": [],
+    "keywords": "",
+    "slug": "patrick-rothfuss",
+    "graph": {
+      "data": [
+        {
+          "x": 2007,
+          "y": 4.55,
+          "data": {
+            "title": "The Name of the Wind (The Kingkiller Chronicle, #1)",
+            "numVotes": "359142",
+            "imageUrl": "http://d.gr-assets.com/books/1452624379s/186074.jpg",
+            "url": "http://www.goodreads.com/book/show/186074.The_Name_of_the_Wind"
+          }
+        },
+        {
+          "x": 2011,
+          "y": 4.57,
+          "data": {
+            "title": "The Wise Man's Fear (The Kingkiller Chronicle, #2)",
+            "numVotes": "234269",
+            "imageUrl": "http://d.gr-assets.com/books/1452624392s/1215032.jpg",
+            "url": "http://www.goodreads.com/book/show/1215032.The_Wise_Man_s_Fear"
+          }
+        },
+        {
+          "x": 2014,
+          "y": 3.91,
+          "data": {
+            "title": "The Slow Regard of Silent Things (The Kingkiller Chronicle #2.5)",
+            "numVotes": "52526",
+            "imageUrl": "http://d.gr-assets.com/books/1398466695s/21535271.jpg",
+            "url": "http://www.goodreads.com/book/show/21535271-the-slow-regard-of-silent-things"
+          }
+        },
+        {
+          "x": 2010,
+          "y": 4.24,
+          "data": {
+            "title": "The Thing Beneath the Bed (The Adventures of the Princess and Mr. Whiffle #1)",
+            "numVotes": "4036",
+            "imageUrl": "http://d.gr-assets.com/books/1261046207s/7286699.jpg",
+            "url": "http://www.goodreads.com/book/show/7286699-the-thing-beneath-the-bed"
+          }
+        }
+      ],
+      "xAxisMin": 2007,
+      "xAxisMax": 2014,
+      "yAxisMin": "3.81",
+      "yAxisMax": "4.67",
+      "regressionData": [
+        [
+          2007,
+          4.61
+        ],
+        [
+          2014,
+          4.03
+        ]
+      ]
+    },
+    "imageUrl": "http://d.gr-assets.com/authors/1351307341p5/108424.jpg",
+    "rating": "4.49",
+    "numRatings": "671806"
+  },
+  {
+    "name": {
+      "name": "George R.R. Martin",
+      "url": "http://www.goodreads.com/author/show/346732.George_R_R_Martin"
+    },
+    "authors": [],
+    "keywords": "",
+    "slug": "george-r-r-martin",
+    "graph": {
+      "data": [
+        {
+          "x": 1996,
+          "y": 4.44,
+          "data": {
+            "title": "A Game of Thrones (A Song of Ice and Fire, #1)",
+            "numVotes": "1233105",
+            "imageUrl": "http://d.gr-assets.com/books/1436732693s/13496.jpg",
+            "url": "http://www.goodreads.com/book/show/13496.A_Game_of_Thrones"
+          }
+        },
+        {
+          "x": 2002,
+          "y": 4.4,
+          "data": {
+            "title": "A Clash of Kings  (A Song of Ice and Fire, #2)",
+            "numVotes": "543223",
+            "imageUrl": "http://d.gr-assets.com/books/1358254974s/10572.jpg",
+            "url": "http://www.goodreads.com/book/show/10572.A_Clash_of_Kings"
+          }
+        },
+        {
+          "x": 2000,
+          "y": 4.54,
+          "data": {
+            "title": "A Storm of Swords (A Song of Ice and Fire, #3)",
+            "numVotes": "470903",
+            "imageUrl": "http://d.gr-assets.com/books/1420979112s/62291.jpg",
+            "url": "http://www.goodreads.com/book/show/62291.A_Storm_of_Swords"
+          }
+        },
+        {
+          "x": 2005,
+          "y": 4.08,
+          "data": {
+            "title": "A Feast for Crows (A Song of Ice and Fire, #4)",
+            "numVotes": "427419",
+            "imageUrl": "http://d.gr-assets.com/books/1429538615s/13497.jpg",
+            "url": "http://www.goodreads.com/book/show/13497.A_Feast_for_Crows"
+          }
+        },
+        {
+          "x": 2011,
+          "y": 4.29,
+          "data": {
+            "title": "A Dance with Dragons (A Song of Ice and Fire, #5)",
+            "numVotes": "372303",
+            "imageUrl": "http://d.gr-assets.com/books/1327885335s/10664113.jpg",
+            "url": "http://www.goodreads.com/book/show/10664113-a-dance-with-dragons"
+          }
+        },
+        {
+          "x": 1982,
+          "y": 3.84,
+          "data": {
+            "title": "Fevre Dream",
+            "numVotes": "14138",
+            "imageUrl": "http://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png",
+            "url": "http://www.goodreads.com/book/show/382450.Fevre_Dream"
+          }
+        },
+        {
+          "x": 2005,
+          "y": 4.22,
+          "data": {
+            "title": "The Hedge Knight (The Tales of Dunk and Egg, #1)",
+            "numVotes": "11587",
+            "imageUrl": "http://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png",
+            "url": "http://www.goodreads.com/book/show/11970747-the-hedge-knight"
+          }
+        },
+        {
+          "x": 2014,
+          "y": 4.21,
+          "data": {
+            "title": "The World of Ice & Fire: The Untold History of Westeros and the Game of Thrones",
+            "numVotes": "11214",
+            "imageUrl": "http://d.gr-assets.com/books/1400360220s/17345242.jpg",
+            "url": "http://www.goodreads.com/book/show/17345242-the-world-of-ice-fire"
+          }
+        },
+        {
+          "x": 2003,
+          "y": 4.06,
+          "data": {
+            "title": "The Sworn Sword (The Tales of Dunk and Egg, #2)",
+            "numVotes": "10428",
+            "imageUrl": "http://d.gr-assets.com/books/1397654143s/11985631.jpg",
+            "url": "http://www.goodreads.com/book/show/11985631-the-sworn-sword"
+          }
+        },
+        {
+          "x": 2010,
+          "y": 4.19,
+          "data": {
+            "title": "The Mystery Knight (The Tales of Dunk and Egg, #3)",
+            "numVotes": "9697",
+            "imageUrl": "http://d.gr-assets.com/books/1397654538s/11350430.jpg",
+            "url": "http://www.goodreads.com/book/show/11350430-the-mystery-knight"
+          }
+        },
+        {
+          "x": 2006,
+          "y": 3.77,
+          "data": {
+            "title": "The Ice Dragon",
+            "numVotes": "7770",
+            "imageUrl": "http://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png",
+            "url": "http://www.goodreads.com/book/show/34896.The_Ice_Dragon"
+          }
+        },
+        {
+          "x": 1986,
+          "y": 4.07,
+          "data": {
+            "title": "Tuf Voyaging",
+            "numVotes": "5592",
+            "imageUrl": "http://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png",
+            "url": "http://www.goodreads.com/book/show/776212.Tuf_Voyaging"
+          }
+        },
+        {
+          "x": 1975,
+          "y": 3.59,
+          "data": {
+            "title": "Windhaven",
+            "numVotes": "3502",
+            "imageUrl": "http://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png",
+            "url": "http://www.goodreads.com/book/show/67957.Windhaven"
+          }
+        },
+        {
+          "x": 1986,
+          "y": 4.23,
+          "data": {
+            "title": "Sandkings",
+            "numVotes": "2912",
+            "imageUrl": "http://d.gr-assets.com/books/1239500907s/769902.jpg",
+            "url": "http://www.goodreads.com/book/show/769902.Sandkings"
+          }
+        },
+        {
+          "x": 1977,
+          "y": 3.55,
+          "data": {
+            "title": "Dying of the Light",
+            "numVotes": "3209",
+            "imageUrl": "http://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png",
+            "url": "http://www.goodreads.com/book/show/67956.Dying_of_the_Light"
+          }
+        },
+        {
+          "x": 2003,
+          "y": 3.91,
+          "data": {
+            "title": "Dreamsongs Volume I (Dreamsongs, #1)",
+            "numVotes": "2863",
+            "imageUrl": "http://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png",
+            "url": "http://www.goodreads.com/book/show/417729.Dreamsongs_Volume_I"
+          }
+        },
+        {
+          "x": 1983,
+          "y": 3.61,
+          "data": {
+            "title": "The Armageddon Rag",
+            "numVotes": "2454",
+            "imageUrl": "http://d.gr-assets.com/books/1320519669s/67948.jpg",
+            "url": "http://www.goodreads.com/book/show/67948.The_Armageddon_Rag"
+          }
+        },
+        {
+          "x": 2008,
+          "y": 3.59,
+          "data": {
+            "title": "Hunter's Run",
+            "numVotes": "2097",
+            "imageUrl": "http://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png",
+            "url": "http://www.goodreads.com/book/show/1282266.Hunter_s_Run"
+          }
+        },
+        {
+          "x": 2013,
+          "y": 3.59,
+          "data": {
+            "title": "The Wit & Wisdom of Tyrion Lannister",
+            "numVotes": "2012",
+            "imageUrl": "http://d.gr-assets.com/books/1376426461s/17910546.jpg",
+            "url": "http://www.goodreads.com/book/show/17910546-the-wit-wisdom-of-tyrion-lannister"
+          }
+        }
+      ],
+      "xAxisMin": 1975,
+      "xAxisMax": 2014,
+      "yAxisMin": "3.45",
+      "yAxisMax": "4.64",
+      "regressionData": [
+        [
+          1975,
+          3.81
+        ],
+        [
+          2014,
+          4.15
+        ]
+      ]
+    },
+    "imageUrl": "http://d.gr-assets.com/authors/1351944410p5/346732.jpg",
+    "rating": "4.36",
+    "numRatings": "3630130"
+  },
+  {
+    "name": {
+      "name": "Foundation",
+      "url": "https://www.goodreads.com/series/59386"
+    },
+    "slug": "foundation",
+    "graph": {
+      "data": [
+        {
+          "x": 1951,
+          "y": 4.1,
+          "data": {
+            "title": "Foundation",
+            "numVotes": "263678",
+            "imageUrl": "http://d2arxad8u2l0g7.cloudfront.net/books/1417900846m/29579.jpg",
+            "url": "https://www.goodreads.com/book/show/29579"
+          }
+        },
+        {
+          "x": 1952,
+          "y": 4.19,
+          "data": {
+            "title": "Foundation and Empire",
+            "numVotes": "105350",
+            "imageUrl": "http://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png",
+            "url": "https://www.goodreads.com/book/show/29581"
+          }
+        },
+        {
+          "x": 1953,
+          "y": 4.22,
+          "data": {
+            "title": "Second Foundation",
+            "numVotes": "96236",
+            "imageUrl": "http://d2arxad8u2l0g7.cloudfront.net/books/1417900922m/29580.jpg",
+            "url": "https://www.goodreads.com/book/show/29580"
+          }
+        },
+        {
+          "x": 1982,
+          "y": 4.06,
+          "data": {
+            "title": "Foundation's Edge",
+            "numVotes": "45514",
+            "imageUrl": "http://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png",
+            "url": "https://www.goodreads.com/book/show/76683"
+          }
+        },
+        {
+          "x": 1986,
+          "y": 4.01,
+          "data": {
+            "title": "Foundation and Earth",
+            "numVotes": "38647",
+            "imageUrl": "http://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png",
+            "url": "https://www.goodreads.com/book/show/29582"
+          }
+        },
+        {
+          "x": 1988,
+          "y": 4.01,
+          "data": {
+            "title": "Prelude to Foundation",
+            "numVotes": "38069",
+            "imageUrl": "http://d2arxad8u2l0g7.cloudfront.net/books/1335782474m/30013.jpg",
+            "url": "https://www.goodreads.com/book/show/30013"
+          }
+        },
+        {
+          "x": 1993,
+          "y": 4.11,
+          "data": {
+            "title": "Forward the Foundation",
+            "numVotes": "30896",
+            "imageUrl": "http://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png",
+            "url": "https://www.goodreads.com/book/show/76679"
+          }
+        }
+      ],
+      "xAxisMin": 1951,
+      "xAxisMax": 1993,
+      "yAxisMin": "3.91",
+      "yAxisMax": "4.32",
+      "regressionData": [
+        [
+          1951,
+          4.17
+        ],
+        [
+          1993,
+          4.03
+        ]
+      ]
+    },
+    "authors": [
+      {
+        "name": "Isaac Asimov",
+        "url": "https://www.goodreads.com/author/show/16667"
+      }
+    ],
+    "imageUrl": "http://d2arxad8u2l0g7.cloudfront.net/books/1417900846m/29579.jpg",
+    "keywords": "fundation",
+    "rating": "4.10",
+    "numRatings": 618390
+  }
+]

@@ -7,6 +7,7 @@ export default class GraphCtrl {
       this.isSeries = !!seriesData.authors.length;
       let title =  this.isSeries ? seriesData.name.name : `${seriesData.name.name}'s Bibliography`;
       this.graphData = this.createGraphOptions(seriesData.graph, title);
+
       // Update the title of this page
       $rootScope.setPageTitle(`GraphBooks - ${title}`);
 
@@ -23,7 +24,7 @@ export default class GraphCtrl {
       },
       yAxis: {
         min: data.yAxisMin,
-        max: 5.00,
+        max: data.yAxisMax,
         title: {
           text: 'Ratings'
         }
@@ -66,6 +67,7 @@ export default class GraphCtrl {
             Votes: ${this.point.data.numVotes}<br/>
           </div>
           <div class="tooltip-image">
+            <div class="tooltip-placeholder"></div>
             <img src="${this.point.data.imageUrl}"/>
           </div>
           </div>`;
