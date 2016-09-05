@@ -1,6 +1,6 @@
 var request = require('supertest'),
     app = require('../../app'),
-    data = require('../static/data.json');
+    data = require('../static/data_MOCK.json');
 
 describe('Requests to the root path', function() {
   var root = '/';
@@ -25,7 +25,7 @@ describe('Requests to the root path', function() {
   });
 });
 
-var seriesGraphqlQuery = '/graphql?query={graphData(slug:"foundation"){name{name}, graph{regressionData}}}';
+var seriesGraphqlQuery = '/graphql?query={graphData(slug:"george-r-r-martin"){name{name}, graph{regressionData}}}';
 describe('Series endpoint: Returning mock data on ' + seriesGraphqlQuery, function() {
   it('Returns 200 status code', function(done) {
     request(app)
