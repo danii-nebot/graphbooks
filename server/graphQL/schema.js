@@ -1,5 +1,5 @@
 var graphql = require('graphql'),
-    data = require('../static/data.json')
+    data = require('../static/data.json');
 
 var linkedNameType = new graphql.GraphQLObjectType({
   name: 'LinkedName',
@@ -44,8 +44,8 @@ var itemType = new graphql.GraphQLObjectType({
     authors:      { type: new graphql.GraphQLList(linkedNameType) },
     keywords:     { type: graphql.GraphQLString },
     slug:         { type: graphql.GraphQLString },
-    rating:       { type: graphql.GraphQLInt},
-    numRatings:   { type: graphql.GraphQLInt},
+    rating:       { type: graphql.GraphQLFloat },
+    numRatings:   { type: graphql.GraphQLInt },
     imageUrl:     { type: graphql.GraphQLString },
     graph:        { type: graphDataType }
   }

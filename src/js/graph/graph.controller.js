@@ -24,7 +24,7 @@ export default class GraphCtrl {
       },
       yAxis: {
         min: data.yAxisMin,
-        max: 5.00,
+        max: data.yAxisMax,
         title: {
           text: 'Ratings'
         }
