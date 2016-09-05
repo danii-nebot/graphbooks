@@ -17,8 +17,7 @@ var concat        = require('gulp-concat');
 var jsFiles       = 'src/js/**/*.js';
 var viewFiles     = 'src/js/**/*.html';
 var sassFiles     = ['src/assets/css/*.scss', 'src/js/**/*.scss'];
-var faviconFile   = 'src/assets/favicon.png';
-var loaderFile    = 'src/assets/loader.gif'
+var assetsFiles   = ['src/assets/favicon.png', 'src/assets/loader.gif'];
 var distDir       = './build/';
 
 var interceptErrors = function(error) {
@@ -62,14 +61,8 @@ gulp.task('html', function() {
       .pipe(gulp.dest(distDir));
 });
 
-gulp.task('favicon', function() {
-  return gulp.src(faviconFile)
-      .on('error', interceptErrors)
-      .pipe(gulp.dest(distDir));
-});
-
-gulp.task('loader', function() {
-  return gulp.src(loaderFile)
+gulp.task('assets', function() {
+  return gulp.src(assetsFiles)
       .on('error', interceptErrors)
       .pipe(gulp.dest(distDir));
 });
@@ -93,7 +86,7 @@ gulp.task('views', function() {
 
 // This task is used for building production ready
 // minified JS/CSS files into the dist/ folder
-gulp.task('build', ['clean', 'html', 'favicon', 'loader', 'sass', 'browserify'], function() {
+gulp.task('build', ['clean', 'html', 'assets', 'sass', 'browserify'], function() {
   var html = gulp.src(distDir + 'index.html')
                  .pipe(gulp.dest(distDir));
 
@@ -107,7 +100,7 @@ gulp.task('build', ['clean', 'html', 'favicon', 'loader', 'sass', 'browserify'],
   return merge(html, css, js);
 });
 
-gulp.task('default', ['clean', 'html', 'favicon', 'loader', 'sass', 'browserify'], function() {
+gulp.task('default', ['clean', 'html', 'assets', 'sass', 'browserify'], function() {
 
   browserSync.init([distDir+'**/**.**'], {
     server: distDir,
