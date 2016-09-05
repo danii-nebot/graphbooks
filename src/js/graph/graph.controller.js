@@ -68,7 +68,7 @@ export default class GraphCtrl {
           </div>
           <div class="tooltip-image">
             <div class="tooltip-placeholder"></div>
-            <img src="${this.point.data.imageUrl}/dfd"/>
+            <img src="${this.point.data.imageUrl}"/>
           </div>
           </div>`;
         }
