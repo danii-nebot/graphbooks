@@ -1,9 +1,6 @@
 # Secret
 server/goodreads
 
-# Do not include data in repo
-server/static/data.json
-
 # Logs
 logs
 *.log
