@@ -20,15 +20,19 @@ Boilerplate code based on https://github.com/GoThinkster/angular-es6-starter’s
 - Serverside:
   - Clean package.json ~ gulp dependencies
   - Organize files, data, review git ignored files
-  - Deploy to Heroku
-    - update local link urls (fav icon)
+  - ~~Deploy to Heroku~~
+    - ~~update local link urls (fav icon)~~
   - bootstrap initial data (getList from Service)
   - images in AWS?
   - ~~Rethink GraphQL data schema~~
   - ~~Fetch/store data from Goodreads API~~
 
 - Config:
+  - loader for app
   - Fixapi path in const `https://${window.location.host}` is this ok?
+
+- Search form:
+  - Fix double return to search
 
 - Header/ footer:
   - what stuff goes in the footer? Disclaimer, trademark, links
@@ -48,7 +52,6 @@ Boilerplate code based on https://github.com/GoThinkster/angular-es6-starter’s
   - Format numbers
   - social links urls
   - Social share text http://www.sharelinkgenerator.com/
-  - loader for app
   - ~~loading spinner for book images~~
   - ~~Make deeplinking work with authors too~~
   - ~~Add ability to graph authors~~
