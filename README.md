@@ -18,7 +18,6 @@ Boilerplate code based on https://github.com/GoThinkster/angular-es6-starter’s
 ### TODOs:
 
 - Serverside:
-
   - Organize files, data, review git ignored files
   - Deploy to Heroku
     - update local link urls (fav icon)
@@ -28,10 +27,10 @@ Boilerplate code based on https://github.com/GoThinkster/angular-es6-starter’s
   - ~~Fetch/store data from Goodreads API~~
 
 - Header/ footer:
-
   - what stuff goes in the footer? Disclaimer, trademark, links
   - style header! clean messy layout CSS
   - ~~Navigation links on footer/header~~
+
 - Style:
 
   - Fonts: All text in page

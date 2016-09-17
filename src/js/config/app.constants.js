@@ -1,6 +1,6 @@
 const AppConstants = {
   appName: 'GraphBooks',
-  api: 'http://localhost:3000'
+  api: `http://${window.location.host}`
 };
 
 export default AppConstants;
