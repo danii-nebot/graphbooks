@@ -35,14 +35,14 @@ var interceptErrors = function(error) {
 
 gulp.task('browserify', ['views'], function() {
   return browserify('./src/js/app.js')
-      .transform(babelify, {presets: ["es2015"]})
-      .transform(ngAnnotate)
-      .bundle()
-      .on('error', interceptErrors)
-      //Pass desired output filename to vinyl-source-stream
-      .pipe(source('main.js'))
-      // Start piping stream to tasks!
-      .pipe(gulp.dest(distDir));
+  .transform(babelify, {presets: ["es2015"]})
+  .transform(ngAnnotate)
+  .bundle()
+  .on('error', interceptErrors)
+  //Pass desired output filename to vinyl-source-stream
+  .pipe(source('main.js'))
+  // Start piping stream to tasks!
+  .pipe(gulp.dest(distDir));
 });
 
 gulp.task('clean', function () {
@@ -57,45 +57,45 @@ gulp.task('clean', function () {
 
 gulp.task('html', function() {
   return gulp.src("src/index.html")
-      .on('error', interceptErrors)
-      .pipe(gulp.dest(distDir));
+  .on('error', interceptErrors)
+  .pipe(gulp.dest(distDir));
 });
 
 gulp.task('assets', function() {
   return gulp.src(assetsFiles)
-      .on('error', interceptErrors)
-      .pipe(gulp.dest(distDir));
+  .on('error', interceptErrors)
+  .pipe(gulp.dest(distDir));
 });
 
 gulp.task('sass', function () {
   return gulp.src(sassFiles)
-    .pipe(sass().on('error', interceptErrors))
-    .pipe(concat('main.css'))
-    .pipe(gulp.dest('./build'));
+  .pipe(sass().on('error', interceptErrors))
+  .pipe(concat('main.css'))
+  .pipe(gulp.dest('./build'));
 });
 
 gulp.task('views', function() {
   return gulp.src(viewFiles)
-      .pipe(templateCache({
-        standalone: true
-      }))
-      .on('error', interceptErrors)
-      .pipe(rename("app.templates.js"))
-      .pipe(gulp.dest('./src/js/config/'));
+  .pipe(templateCache({
+    standalone: true
+  }))
+  .on('error', interceptErrors)
+  .pipe(rename("app.templates.js"))
+  .pipe(gulp.dest('./src/js/config/'));
 });
 
 // This task is used for building production ready
 // minified JS/CSS files into the dist/ folder
 gulp.task('build', ['clean', 'html', 'assets', 'sass', 'browserify'], function() {
   var html = gulp.src(distDir + 'index.html')
-                 .pipe(gulp.dest(distDir));
+  .pipe(gulp.dest(distDir));
 
   var css = gulp.src(distDir+'main.css')
-                .pipe(gulp.dest(distDir));
+  .pipe(gulp.dest(distDir));
 
   var js = gulp.src(distDir+'main.js')
-               .pipe(uglify())
-               .pipe(gulp.dest(distDir));
+  .pipe(uglify())
+  .pipe(gulp.dest(distDir));
 
   return merge(html, css, js);
 });

@@ -1,6 +1,9 @@
 ## graphbooks
 
-This is intended to be a personal learning project to (re)learn Angular and get acquainted with es6 syntax and web components.
+This is at its core a personal learning project to (re)learn Angular 1.x and
+get acquainted with the new and fancy [ES6 syntax](https://github.com/lukehoban/es6features).
+As such, some technological decisions have been made attending to indefensible criteria such as
+"ooh I really want to play with this new tech X".
 
 ### the app:
 
