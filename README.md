@@ -18,6 +18,7 @@ Boilerplate code based on https://github.com/GoThinkster/angular-es6-starter’s
 ### TODOs:
 
 - Serverside:
+  - Clean package.json ~ gulp dependencies
   - Organize files, data, review git ignored files
   - Deploy to Heroku
     - update local link urls (fav icon)

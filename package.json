@@ -18,21 +18,16 @@
   "dependencies": {
     "angular": "^1.5.7",
     "angular-ui-router": "^0.3.1",
-    "cors": "^2.7.1",
-    "express": "^4.14.0",
-    "express-graphql": "^0.5.3",
-    "graphql": "^0.6.0",
-    "highcharts": "^4.2.5"
-  },
-  "devDependencies": {
     "babel-preset-es2015": "^6.9.0",
     "babelify": "^7.3.0",
     "browser-sync": "^2.13.0",
     "browserify": "^13.0.1",
     "browserify-ngannotate": "^2.0.0",
-    "cheerio": "^0.20.0",
+    "cors": "^2.7.1",
     "del": "^2.2.1",
-    "goodreads": "git://github.com/danii-nebot/node-goodreads.git",
+    "express": "^4.14.0",
+    "express-graphql": "^0.5.3",
+    "graphql": "^0.6.0",
     "gulp": "^3.9.1",
     "gulp-angular-templatecache": "^2.0.0",
     "gulp-concat": "^2.6.0",
@@ -41,12 +36,17 @@
     "gulp-sass": "^2.3.2",
     "gulp-uglify": "^1.5.4",
     "gulp-util": "^3.0.7",
-    "jsonfile": "^2.3.1",
+    "highcharts": "^4.2.5",
     "merge-stream": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "devDependencies": {
+    "cheerio": "^0.20.0",
+    "goodreads": "git://github.com/danii-nebot/node-goodreads.git",
+    "jsonfile": "^2.3.1",
     "mocha": "^2.5.3",
     "node-promise": "^0.5.12",
     "request": "^2.74.0",
-    "supertest": "^1.2.0",
-    "vinyl-source-stream": "^1.1.0"
+    "supertest": "^1.2.0"
   }
 }
