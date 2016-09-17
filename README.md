@@ -27,13 +27,15 @@ Boilerplate code based on https://github.com/GoThinkster/angular-es6-starter’s
   - ~~Rethink GraphQL data schema~~
   - ~~Fetch/store data from Goodreads API~~
 
+- Config:
+  - Fixapi path in const `https://${window.location.host}` is this ok?
+
 - Header/ footer:
   - what stuff goes in the footer? Disclaimer, trademark, links
   - style header! clean messy layout CSS
   - ~~Navigation links on footer/header~~
 
 - Style:
-
   - Fonts: All text in page
   - http://realfavicongenerator.net/ do we need rest of fancy favicons?
   - flex boxes in Graph page, screw bootstrap cols

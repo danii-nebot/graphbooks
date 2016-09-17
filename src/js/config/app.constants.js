@@ -1,6 +1,7 @@
 const AppConstants = {
   appName: 'GraphBooks',
-  api: `http://${window.location.host}`
+  // TODO: this does NOT look great
+  api: `https://${window.location.host}`
 };
 
 export default AppConstants;
