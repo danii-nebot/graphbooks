@@ -15,7 +15,7 @@
           <span ng-if="$index > 0">, </span>
           <a target="_blank" ng-href="{{ ::author.url }}" ng-bind="::author.name"></a>
         </span>
-        <p>Average <span class="stat-number" ng-bind="::$ctrl.data.rating"></span>/5 based on <span class="stat-number" ng-bind="::$ctrl.data.numRatings"></span> ratings</p>
+        <p>Average <span class="stat-number" ng-bind="::$ctrl.data.rating"></span>/5 based on <span class="stat-number" ng-bind="::$ctrl.data.numRatings | number"></span> ratings</p>
 
         <p><a target="_blank" ng-href="{{ ::$ctrl.data.name.url }}">See the list of books in this series on Goodreads</a></p>
       </div>

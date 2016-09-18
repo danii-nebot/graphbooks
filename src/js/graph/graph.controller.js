@@ -1,12 +1,12 @@
 export default class GraphCtrl {
-  constructor(seriesData, $rootScope, $state, $location) {
+  constructor(seriesData, $rootScope, $state, $location, numberFilter) {
     'ngInject';
 
     if(seriesData) {
       this.data = seriesData;
       this.isSeries = !!seriesData.authors.length;
       let title =  this.isSeries ? seriesData.name.name : `${seriesData.name.name}'s Bibliography`;
-      this.graphData = this.createGraphOptions(seriesData.graph, title);
+      this.graphData = this.createGraphOptions(seriesData.graph, title, numberFilter);
 
       // Update the title of this page
       $rootScope.setPageTitle(`GraphBooks - ${title}`);
@@ -16,7 +16,7 @@ export default class GraphCtrl {
     }
   }
 
-  createGraphOptions(data, title) {
+  createGraphOptions(data, title, numberFilter) {
     let options = {
       xAxis: {
         min: data.xAxisMin,
@@ -64,7 +64,7 @@ export default class GraphCtrl {
             <b>${this.point.data.title}</b><br/>
             Year: ${this.point.x}<br/>
             Rating: ${this.point.y}<br/>
-            Votes: ${this.point.data.numVotes}<br/>
+            Votes: ${numberFilter(this.point.data.numVotes)}<br/>
           </div>
           <div class="tooltip-image">
             <div class="tooltip-placeholder"></div>

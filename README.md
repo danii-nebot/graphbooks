@@ -50,10 +50,10 @@ Boilerplate code based on https://github.com/GoThinkster/angular-es6-starter’s
   - ~~search button~~
 
 - Graph Page:
-  - Format numbers
   - Review series picture (currently 1st book in series)
   - social links urls
   - Social share text http://www.sharelinkgenerator.com/
+  - ~~Format numbers~~
   - ~~loading spinner for book images~~
   - ~~Make deeplinking work with authors too~~
   - ~~Add ability to graph authors~~
