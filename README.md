@@ -18,18 +18,19 @@ Boilerplate code based on https://github.com/GoThinkster/angular-es6-starter’s
 ### TODOs:
 
 - Serverside:
+  - Fix gulp dev environment :(
   - Clean package.json ~ gulp dependencies
   - Organize files, data, review git ignored files
-  - ~~Deploy to Heroku~~
-    - ~~update local link urls (fav icon)~~
   - bootstrap initial data (getList from Service)
   - images in AWS?
+  - ~~Deploy to Heroku~~
+    - ~~update local link urls (fav icon)~~
   - ~~Rethink GraphQL data schema~~
   - ~~Fetch/store data from Goodreads API~~
 
 - Config:
   - loader for app
-  - Fixapi path in const `https://${window.location.host}` is this ok?
+  - Fix api path in const `${window.location.protocol}//${window.location.host}` is this ok?
 
 - Search form:
   - Fix double return to search
@@ -50,6 +51,7 @@ Boilerplate code based on https://github.com/GoThinkster/angular-es6-starter’s
 
 - Graph Page:
   - Format numbers
+  - Review series picture (currently 1st book in series)
   - social links urls
   - Social share text http://www.sharelinkgenerator.com/
   - ~~loading spinner for book images~~
