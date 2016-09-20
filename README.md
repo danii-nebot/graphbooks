@@ -51,6 +51,7 @@ Boilerplate code based on https://github.com/GoThinkster/angular-es6-starter’s
 
 - Graph Page:
   - Review series picture (currently 1st book in series)
+  - Fix Mixed content warning: The page at 'https://sleepy-shore-12785.herokuapp.com/#/graph/temeraire' was loaded over HTTPS, but requested an insecure image 'http://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png'. This content should also be served over HTTPS.
   - social links urls
   - Social share text http://www.sharelinkgenerator.com/
   - ~~Format numbers~~
@@ -67,4 +68,4 @@ Boilerplate code based on https://github.com/GoThinkster/angular-es6-starter’s
   - ~~Add list of technologies used~~
 
 - Landing Page:
-  - Add links to series, authors search examples
+  - ~~Add links to series, authors search examples~~
