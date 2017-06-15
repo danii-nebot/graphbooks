@@ -50,4 +50,5 @@ Boilerplate code based on https://github.com/GoThinkster/angular-es6-starter’s
 
 - Data
   - Margaret Atwood Handmaid's Tale
+  - Heinlein Stranger in a strange land https://images-na.ssl-images-amazon.com/images/I/51gmwC3rQeL.jpg
 
