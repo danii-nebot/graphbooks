@@ -30871,5 +30871,315 @@
     "imageUrl": "https://d.gr-assets.com/authors/1445955959p5/1630.jpg",
     "rating": "3.99",
     "numRatings": "1507915"
+  },
+  {
+    "name": {
+      "name": "Margaret Atwood",
+      "url": "httpss://www.goodreads.com/author/show/3472.Margaret_Atwood"
+    },
+    "authors": [],
+    "keywords": "",
+    "slug": "margaret-atwood",
+    "graph": {
+      "data": [
+        {
+          "x": 1985,
+          "y": 4.05,
+          "data": {
+            "title": "The Handmaid's Tale",
+            "numVotes": "624735",
+            "imageUrl": "https://images.gr-assets.com/books/1496592764l/38447.jpg",
+            "url": "https://www.goodreads.com/book/show/38447.The_Handmaid_s_Tale"
+          }
+        },
+        {
+          "x": 2003,
+          "y": 4,
+          "data": {
+            "title": "Oryx and Crake (MaddAddam, #1)",
+            "numVotes": "163535",
+            "imageUrl": "https://images.gr-assets.com/books/1494109986l/46756.jpg",
+            "url": "https://www.goodreads.com/book/show/46756.Oryx_and_Crake"
+          }
+        },
+        {
+          "x": 2000,
+          "y": 3.94,
+          "data": {
+            "title": "The Blind Assassin",
+            "numVotes": "109574",
+            "imageUrl": "https://images.gr-assets.com/books/1451445426l/78433.jpg",
+            "url": "https://www.goodreads.com/book/show/78433.The_Blind_Assassin"
+          }
+        },
+        {
+          "x": 2009,
+          "y": 4.05,
+          "data": {
+            "title": "The Year of the Flood  (MaddAddam, #2)",
+            "numVotes": "75243",
+            "imageUrl": "https://images.gr-assets.com/books/1327906873l/6080337.jpg",
+            "url": "https://www.goodreads.com/book/show/6080337-the-year-of-the-flood"
+          }
+        },
+        {
+          "x": 1996,
+          "y": 3.97,
+          "data": {
+            "title": "Alias Grace",
+            "numVotes": "58669",
+            "imageUrl": "https://images.gr-assets.com/books/1298545436l/72579.jpg",
+            "url": "https://www.goodreads.com/book/show/72579.Alias_Grace"
+          }
+        },
+        {
+          "x": 1988,
+          "y": 3.92,
+          "data": {
+            "title": "Cat's Eye",
+            "numVotes": "44357",
+            "imageUrl": "https://images.gr-assets.com/books/1385207977l/51019.jpg",
+            "url": "https://www.goodreads.com/book/show/51019.Cat_s_Eye"
+          }
+        },
+        {
+          "x": 2013,
+          "y": 3.98,
+          "data": {
+            "title": "MaddAddam (MaddAddam, #3)",
+            "numVotes": "40741",
+            "imageUrl": "https://images.gr-assets.com/books/1366394020l/17262203.jpg",
+            "url": "https://www.goodreads.com/book/show/17262203-maddaddam"
+          }
+        },
+        {
+          "x": 1993,
+          "y": 3.82,
+          "data": {
+            "title": "The Robber Bride",
+            "numVotes": "31315",
+            "imageUrl": "https://images.gr-assets.com/books/1388263287l/17650.jpg",
+            "url": "https://www.goodreads.com/book/show/17650.The_Robber_Bride"
+          }
+        },
+        {
+          "x": 2015,
+          "y": 3.37,
+          "data": {
+            "title": "The Heart Goes Last",
+            "numVotes": "30254",
+            "imageUrl": "https://images.gr-assets.com/books/1493598486l/24388326.jpg",
+            "url": "https://www.goodreads.com/book/show/24388326-the-heart-goes-last"
+          }
+        },
+        {
+          "x": 2005,
+          "y": 3.65,
+          "data": {
+            "title": "The Penelopiad",
+            "numVotes": "25056",
+            "imageUrl": "https://images.gr-assets.com/books/1442806554l/17645.jpg",
+            "url": "https://www.goodreads.com/book/show/17645.The_Penelopiad"
+          }
+        },
+        {
+          "x": 1969,
+          "y": 3.67,
+          "data": {
+            "title": "The Edible Woman",
+            "numVotes": "22777",
+            "imageUrl": "https://images.gr-assets.com/books/1320439047l/133445.jpg",
+            "url": "https://www.goodreads.com/book/show/133445.The_Edible_Woman"
+          }
+        },
+        {
+          "x": 1972,
+          "y": 3.45,
+          "data": {
+            "title": "Surfacing",
+            "numVotes": "16607",
+            "imageUrl": "https://images.gr-assets.com/books/1386924306l/46755.jpg",
+            "url": "https://www.goodreads.com/book/show/46755.Surfacing"
+          }
+        },
+        {
+          "x": 2014,
+          "y": 3.93,
+          "data": {
+            "title": "Stone Mattress: Nine Tales",
+            "numVotes": "13855",
+            "imageUrl": "https://images.gr-assets.com/books/1404769155l/22642472.jpg",
+            "url": "https://www.goodreads.com/book/show/22642472-stone-mattress"
+          }
+        },
+        {
+          "x": 2016,
+          "y": 3.91,
+          "data": {
+            "title": "Hag-Seed",
+            "numVotes": "8573",
+            "imageUrl": "https://images.gr-assets.com/books/1463887982l/28588073.jpg",
+            "url": "https://www.goodreads.com/book/show/28588073-hag-seed"
+          }
+        },
+        {
+          "x": 1976,
+          "y": 3.67,
+          "data": {
+            "title": "Lady Oracle",
+            "numVotes": "9032",
+            "imageUrl": "https://images.gr-assets.com/books/1388432970l/47122.jpg",
+            "url": "https://www.goodreads.com/book/show/47122.Lady_Oracle"
+          }
+        },
+        {
+          "x": 2006,
+          "y": 3.63,
+          "data": {
+            "title": "Moral Disorder and Other Stories",
+            "numVotes": "8042",
+            "imageUrl": "https://images.gr-assets.com/books/1386920088l/17644.jpg",
+            "url": "https://www.goodreads.com/book/show/17644.Moral_Disorder_and_Other_Stories"
+          }
+        },
+        {
+          "x": 1991,
+          "y": 3.8,
+          "data": {
+            "title": "Wilderness Tips",
+            "numVotes": "6274",
+            "imageUrl": "https://images.gr-assets.com/books/1320412198l/103162.jpg",
+            "url": "https://www.goodreads.com/book/show/103162.Wilderness_Tips"
+          }
+        },
+        {
+          "x": 1983,
+          "y": 3.74,
+          "data": {
+            "title": "Bluebeard's Egg",
+            "numVotes": "5250",
+            "imageUrl": "https://images.gr-assets.com/books/1386922020l/50536.jpg",
+            "url": "https://www.goodreads.com/book/show/50536.Bluebeard_s_Egg"
+          }
+        },
+        {
+          "x": 1981,
+          "y": 3.35,
+          "data": {
+            "title": "Bodily Harm",
+            "numVotes": "5304",
+            "imageUrl": "https://images.gr-assets.com/books/1320478083l/160728.jpg",
+            "url": "https://www.goodreads.com/book/show/160728.Bodily_Harm"
+          }
+        },
+        {
+          "x": 2006,
+          "y": 3.7,
+          "data": {
+            "title": "The Tent",
+            "numVotes": "4512",
+            "imageUrl": "https://images.gr-assets.com/books/1388285549l/17646.jpg",
+            "url": "https://www.goodreads.com/book/show/17646.The_Tent"
+          }
+        },
+        {
+          "x": 1979,
+          "y": 3.41,
+          "data": {
+            "title": "Life Before Man",
+            "numVotes": "4809",
+            "imageUrl": "https://images.gr-assets.com/books/1388292050l/72584.jpg",
+            "url": "https://www.goodreads.com/book/show/72584.Life_Before_Man"
+          }
+        },
+        {
+          "x": 2012,
+          "y": 3.7,
+          "data": {
+            "title": "I'm Starved for You (Positron, #1)",
+            "numVotes": "3218",
+            "imageUrl": "https://images.gr-assets.com/books/1331270328l/13515663.jpg",
+            "url": "https://www.goodreads.com/book/show/13515663-i-m-starved-for-you"
+          }
+        },
+        {
+          "x": 1977,
+          "y": 3.61,
+          "data": {
+            "title": "Dancing Girls",
+            "numVotes": "2656",
+            "imageUrl": "https://images.gr-assets.com/books/1388179861l/17649.jpg",
+            "url": "https://www.goodreads.com/book/show/17649.Dancing_Girls"
+          }
+        },
+        {
+          "x": 2002,
+          "y": 3.91,
+          "data": {
+            "title": "Negotiating with the Dead",
+            "numVotes": "2288",
+            "imageUrl": "https://images.gr-assets.com/books/1389700874l/17647.jpg",
+            "url": "https://www.goodreads.com/book/show/17647.Negotiating_with_the_Dead"
+          }
+        },
+        {
+          "x": 1994,
+          "y": 3.93,
+          "data": {
+            "title": "Good Bones and Simple Murders",
+            "numVotes": "2201",
+            "imageUrl": "https://images.gr-assets.com/books/1389079922l/47126.jpg",
+            "url": "https://www.goodreads.com/book/show/47126.Good_Bones_and_Simple_Murders"
+          }
+        },
+        {
+          "x": 1995,
+          "y": 4.12,
+          "data": {
+            "title": "Morning in the Burned House",
+            "numVotes": "1741",
+            "imageUrl": "https://images.gr-assets.com/books/1439055576l/28776.jpg",
+            "url": "https://www.goodreads.com/book/show/28776.Morning_in_the_Burned_House"
+          }
+        },
+        {
+          "x": 2013,
+          "y": 4.49,
+          "data": {
+            "title": "The MaddAddam Trilogy: Oryx and Crake; The Year of the Flood; MaddAddam",
+            "numVotes": "1531",
+            "imageUrl": "https://images.gr-assets.com/books/1395435093l/18594761.jpg",
+            "url": "https://www.goodreads.com/book/show/18594761-the-maddaddam-trilogy"
+          }
+        },
+        {
+          "x": 2007,
+          "y": 3.71,
+          "data": {
+            "title": "Payback: Debt and the Shadow Side of Wealth",
+            "numVotes": "1729",
+            "imageUrl": "https://images.gr-assets.com/books/1328772265l/3428252.jpg",
+            "url": "https://www.goodreads.com/book/show/3428252-payback"
+          }
+        }
+      ],
+      "xAxisMin": 1969,
+      "xAxisMax": 2007,
+      "yAxisMin": "3.25",
+      "yAxisMax": "4.59",
+      "regressionData": [
+        [
+          1969,
+          "3.68"
+        ],
+        [
+          2007,
+          "3.95"
+        ]
+      ]
+    },
+    "imageUrl": "https://images.gr-assets.com/authors/1282859073p5/3472.jpg",
+    "rating": "3.96",
+    "numRatings": "1377883"
   }
 ]
