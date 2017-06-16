@@ -18,15 +18,13 @@ Boilerplate code based on https://github.com/GoThinkster/angular-es6-starter’s
 ### TODOs:
 
 - Serverside:
-  - Fix gulp dev environment :(
-  - Clean package.json ~ gulp dependencies
+  - Fix gulp dev environment -> switch to webpack
+  - Clean package.json
   - Organize files, data, review git ignored files
   - bootstrap initial data (getList from Service)
+  - Universal Server side rendering?
   - images in AWS?
-  - ~~Deploy to Heroku~~
-    - ~~update local link urls (fav icon)~~
-  - ~~Rethink GraphQL data schema~~
-  - ~~Fetch/store data from Goodreads API~~
+  - Change deployment to NOW?
 
 - Config:
   - loader for app
@@ -38,34 +36,15 @@ Boilerplate code based on https://github.com/GoThinkster/angular-es6-starter’s
 - Header/ footer:
   - what stuff goes in the footer? Disclaimer, trademark, links
   - style header! clean messy layout CSS
-  - ~~Navigation links on footer/header~~
 
 - Style:
   - Fonts: All text in page
   - http://realfavicongenerator.net/ do we need rest of fancy favicons?
   - flex boxes in Graph page, screw bootstrap cols
-  - ~~create&add favicon!~~
-  - ~~Fonts: Logo/app name~~
-  - ~~search component~~
-  - ~~search button~~
 
 - Graph Page:
   - Review series picture (currently 1st book in series)
-  - Fix Mixed content warning: The page at 'https://sleepy-shore-12785.herokuapp.com/#/graph/temeraire' was loaded over HTTPS, but requested an insecure image 'http://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png'. This content should also be served over HTTPS.
   - social links urls
   - Social share text http://www.sharelinkgenerator.com/
-  - ~~Format numbers~~
-  - ~~loading spinner for book images~~
-  - ~~Make deeplinking work with authors too~~
-  - ~~Add ability to graph authors~~
-  - ~~Graph page: Series image~~
-  - ~~book images in graph~~
-  - ~~Share this page on: TWITTER FB~~
-  - ~~Share urls~~
 
-- About Page:
-  - ~~Rewrite~~
-  - ~~Add list of technologies used~~
 
-- Landing Page:
-  - ~~Add links to series, authors search examples~~
