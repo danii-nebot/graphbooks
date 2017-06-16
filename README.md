@@ -43,7 +43,6 @@ Boilerplate code based on https://github.com/GoThinkster/angular-es6-starter’s
   - flex boxes in Graph page, screw bootstrap cols
 
 - Graph Page:
-  - Missing images
   - Review series picture (currently 1st book in series)
   - social links urls
   - Social share text http://www.sharelinkgenerator.com/
