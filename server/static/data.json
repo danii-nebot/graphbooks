@@ -31181,5 +31181,505 @@
     "imageUrl": "https://images.gr-assets.com/authors/1282859073p5/3472.jpg",
     "rating": "3.96",
     "numRatings": "1377883"
+  },
+  {
+    "name": {
+      "name": "Robert A. Heinlein",
+      "url": "https://www.goodreads.com/author/show/205.Robert_A_Heinlein"
+    },
+    "authors": [],
+    "keywords": "",
+    "slug": "robert-a-heinlein",
+    "graph": {
+      "data": [
+        {
+          "x": 1961,
+          "y": 3.9,
+          "data": {
+            "title": "Stranger in a Strange Land",
+            "numVotes": "226111",
+            "imageUrl": "https://images.gr-assets.com/books/1156897088l/350.jpg",
+            "url": "https://www.goodreads.com/book/show/350.Stranger_in_a_Strange_Land"
+          }
+        },
+        {
+          "x": 1959,
+          "y": 3.99,
+          "data": {
+            "title": "Starship Troopers",
+            "numVotes": "142985",
+            "imageUrl": "https://images.gr-assets.com/books/1406457252l/17214.jpg",
+            "url": "https://www.goodreads.com/book/show/17214.Starship_Troopers"
+          }
+        },
+        {
+          "x": 1966,
+          "y": 4.17,
+          "data": {
+            "title": "The Moon is a Harsh Mistress",
+            "numVotes": "84874",
+            "imageUrl": "https://images.gr-assets.com/books/1348768309l/16690.jpg",
+            "url": "https://www.goodreads.com/book/show/16690.The_Moon_is_a_Harsh_Mistress"
+          }
+        },
+        {
+          "x": 1973,
+          "y": 3.96,
+          "data": {
+            "title": "Time Enough for Love",
+            "numVotes": "27171",
+            "imageUrl": "https://images.gr-assets.com/books/1218664355l/353.jpg",
+            "url": "https://www.goodreads.com/book/show/353.Time_Enough_for_Love"
+          }
+        },
+        {
+          "x": 1951,
+          "y": 3.86,
+          "data": {
+            "title": "The Puppet Masters",
+            "numVotes": "25840",
+            "imageUrl": "https://images.gr-assets.com/books/1348052588l/7171856.jpg",
+            "url": "https://www.goodreads.com/book/show/7171856-the-puppet-masters"
+          }
+        },
+        {
+          "x": 1982,
+          "y": 3.82,
+          "data": {
+            "title": "Friday",
+            "numVotes": "22749",
+            "imageUrl": "https://images.gr-assets.com/books/1315410828l/17208.jpg",
+            "url": "https://www.goodreads.com/book/show/17208.Friday"
+          }
+        },
+        {
+          "x": 1958,
+          "y": 3.88,
+          "data": {
+            "title": "Have Space Suit—Will Travel",
+            "numVotes": "21549",
+            "imageUrl": "https://images.gr-assets.com/books/1425593094l/20417.jpg",
+            "url": "https://www.goodreads.com/book/show/20417.Have_Space_Suit_Will_Travel"
+          }
+        },
+        {
+          "x": 1957,
+          "y": 4,
+          "data": {
+            "title": "The Door Into Summer",
+            "numVotes": "17780",
+            "imageUrl": "https://images.gr-assets.com/books/1342241886l/348.jpg",
+            "url": "https://www.goodreads.com/book/show/348.The_Door_Into_Summer"
+          }
+        },
+        {
+          "x": 1985,
+          "y": 3.7,
+          "data": {
+            "title": "The Cat Who Walks Through Walls",
+            "numVotes": "18232",
+            "imageUrl": "https://images.gr-assets.com/books/1440037870l/16685.jpg",
+            "url": "https://www.goodreads.com/book/show/16685.The_Cat_Who_Walks_Through_Walls"
+          }
+        },
+        {
+          "x": 1941,
+          "y": 3.98,
+          "data": {
+            "title": "Methuselah's Children",
+            "numVotes": "15775",
+            "imageUrl": "https://images.gr-assets.com/books/1253209003l/175319.jpg",
+            "url": "https://www.goodreads.com/book/show/175319.Methuselah_s_Children"
+          }
+        },
+        {
+          "x": 1956,
+          "y": 3.88,
+          "data": {
+            "title": "Double Star",
+            "numVotes": "15541",
+            "imageUrl": "https://images.gr-assets.com/books/1327984434l/175324.jpg",
+            "url": "https://www.goodreads.com/book/show/175324.Double_Star"
+          }
+        },
+        {
+          "x": 1967,
+          "y": 4.15,
+          "data": {
+            "title": "The Past Through Tomorrow (Future History, #1-21)",
+            "numVotes": "14206",
+            "imageUrl": "https://images.gr-assets.com/books/1325885616l/121581.jpg",
+            "url": "https://www.goodreads.com/book/show/121581.The_Past_Through_Tomorrow"
+          }
+        },
+        {
+          "x": 1984,
+          "y": 3.77,
+          "data": {
+            "title": "Job: A Comedy of Justice",
+            "numVotes": "14744",
+            "imageUrl": "https://images.gr-assets.com/books/1438043968l/355.jpg",
+            "url": "https://www.goodreads.com/book/show/355.Job"
+          }
+        },
+        {
+          "x": 1957,
+          "y": 3.97,
+          "data": {
+            "title": "Citizen of the Galaxy",
+            "numVotes": "10911",
+            "imageUrl": "https://images.gr-assets.com/books/1386920606l/16689.jpg",
+            "url": "https://www.goodreads.com/book/show/16689.Citizen_of_the_Galaxy"
+          }
+        },
+        {
+          "x": 1955,
+          "y": 3.92,
+          "data": {
+            "title": "Tunnel in the Sky",
+            "numVotes": "10245",
+            "imageUrl": "https://images.gr-assets.com/books/1386922500l/16683.jpg",
+            "url": "https://www.goodreads.com/book/show/16683.Tunnel_in_the_Sky"
+          }
+        },
+        {
+          "x": 1963,
+          "y": 3.78,
+          "data": {
+            "title": "Glory Road",
+            "numVotes": "10266",
+            "imageUrl": "https://images.gr-assets.com/books/1389403992l/50856.jpg",
+            "url": "https://www.goodreads.com/book/show/50856.Glory_Road"
+          }
+        },
+        {
+          "x": 1987,
+          "y": 3.87,
+          "data": {
+            "title": "To Sail Beyond the Sunset",
+            "numVotes": "9745",
+            "imageUrl": "https://images.gr-assets.com/books/1440996170l/354.jpg",
+            "url": "https://www.goodreads.com/book/show/354.To_Sail_Beyond_the_Sunset"
+          }
+        },
+        {
+          "x": 1980,
+          "y": 3.61,
+          "data": {
+            "title": "The Number of the Beast",
+            "numVotes": "10379",
+            "imageUrl": "https://images.gr-assets.com/books/1201734223l/50877.jpg",
+            "url": "https://www.goodreads.com/book/show/50877.The_Number_of_the_Beast"
+          }
+        },
+        {
+          "x": 1970,
+          "y": 3.68,
+          "data": {
+            "title": "I Will Fear No Evil",
+            "numVotes": "9766",
+            "imageUrl": "https://images.gr-assets.com/books/1303411477l/175325.jpg",
+            "url": "https://www.goodreads.com/book/show/175325.I_Will_Fear_No_Evil"
+          }
+        },
+        {
+          "x": 1964,
+          "y": 3.55,
+          "data": {
+            "title": "Farnham's Freehold",
+            "numVotes": "9836",
+            "imageUrl": "https://images.gr-assets.com/books/1170371993l/50840.jpg",
+            "url": "https://www.goodreads.com/book/show/50840.Farnham_s_Freehold"
+          }
+        },
+        {
+          "x": 1951,
+          "y": 3.89,
+          "data": {
+            "title": "The Man Who Sold the Moon",
+            "numVotes": "8458",
+            "imageUrl": "https://images.gr-assets.com/books/1406525754l/16688.jpg",
+            "url": "https://www.goodreads.com/book/show/16688.The_Man_Who_Sold_the_Moon"
+          }
+        },
+        {
+          "x": 1949,
+          "y": 3.78,
+          "data": {
+            "title": "Red Planet",
+            "numVotes": "7662",
+            "imageUrl": "https://images.gr-assets.com/books/1388595680l/50843.jpg",
+            "url": "https://www.goodreads.com/book/show/50843.Red_Planet"
+          }
+        },
+        {
+          "x": 1963,
+          "y": 3.79,
+          "data": {
+            "title": "Orphans of the Sky",
+            "numVotes": "7632",
+            "imageUrl": "https://images.gr-assets.com/books/1386922510l/50832.jpg",
+            "url": "https://www.goodreads.com/book/show/50832.Orphans_of_the_Sky"
+          }
+        },
+        {
+          "x": 1950,
+          "y": 3.88,
+          "data": {
+            "title": "Waldo and Magic, Inc",
+            "numVotes": "7231",
+            "imageUrl": "https://images.gr-assets.com/books/1216422511l/121586.jpg",
+            "url": "https://www.goodreads.com/book/show/121586.Waldo_and_Magic_Inc"
+          }
+        },
+        {
+          "x": 1950,
+          "y": 3.73,
+          "data": {
+            "title": "Farmer in the Sky",
+            "numVotes": "7351",
+            "imageUrl": "https://images.gr-assets.com/books/1408053311l/50851.jpg",
+            "url": "https://www.goodreads.com/book/show/50851.Farmer_in_the_Sky"
+          }
+        },
+        {
+          "x": 1956,
+          "y": 3.95,
+          "data": {
+            "title": "Time for the Stars",
+            "numVotes": "6822",
+            "imageUrl": "https://images.gr-assets.com/books/1312056144l/356.jpg",
+            "url": "https://www.goodreads.com/book/show/356.Time_for_the_Stars"
+          }
+        },
+        {
+          "x": 1951,
+          "y": 3.85,
+          "data": {
+            "title": "The Green Hills of Earth",
+            "numVotes": "6966",
+            "imageUrl": "https://images.gr-assets.com/books/1391232875l/50831.jpg",
+            "url": "https://www.goodreads.com/book/show/50831.The_Green_Hills_of_Earth"
+          }
+        },
+        {
+          "x": 1963,
+          "y": 3.65,
+          "data": {
+            "title": "Podkayne of Mars",
+            "numVotes": "7009",
+            "imageUrl": "https://images.gr-assets.com/books/1388228048l/50839.jpg",
+            "url": "https://www.goodreads.com/book/show/50839.Podkayne_of_Mars"
+          }
+        },
+        {
+          "x": 1948,
+          "y": 3.8,
+          "data": {
+            "title": "Space Cadet",
+            "numVotes": "6741",
+            "imageUrl": "https://images.gr-assets.com/books/1312063775l/50852.jpg",
+            "url": "https://www.goodreads.com/book/show/50852.Space_Cadet"
+          }
+        },
+        {
+          "x": 1953,
+          "y": 3.82,
+          "data": {
+            "title": "Starman Jones",
+            "numVotes": "6203",
+            "imageUrl": "https://images.gr-assets.com/books/1388342744l/351.jpg",
+            "url": "https://www.goodreads.com/book/show/351.Starman_Jones"
+          }
+        },
+        {
+          "x": 1947,
+          "y": 3.71,
+          "data": {
+            "title": "Rocket Ship Galileo",
+            "numVotes": "6143",
+            "imageUrl": "https://images.gr-assets.com/books/1386922183l/16682.jpg",
+            "url": "https://www.goodreads.com/book/show/16682.Rocket_Ship_Galileo"
+          }
+        },
+        {
+          "x": 1954,
+          "y": 3.76,
+          "data": {
+            "title": "The Star Beast",
+            "numVotes": "5798",
+            "imageUrl": "https://images.gr-assets.com/books/1172433439l/175328.jpg",
+            "url": "https://www.goodreads.com/book/show/175328.The_Star_Beast"
+          }
+        },
+        {
+          "x": 1952,
+          "y": 3.85,
+          "data": {
+            "title": "The Rolling Stones",
+            "numVotes": "5527",
+            "imageUrl": "https://images.gr-assets.com/books/1290564157l/50848.jpg",
+            "url": "https://www.goodreads.com/book/show/50848.The_Rolling_Stones"
+          }
+        },
+        {
+          "x": 1959,
+          "y": 3.88,
+          "data": {
+            "title": "The Menace from Earth (Future History, #18)",
+            "numVotes": "5361",
+            "imageUrl": "https://images.gr-assets.com/books/1391040335l/50837.jpg",
+            "url": "https://www.goodreads.com/book/show/50837.The_Menace_from_Earth"
+          }
+        },
+        {
+          "x": 1997,
+          "y": 3.86,
+          "data": {
+            "title": "Variable Star",
+            "numVotes": "4686",
+            "imageUrl": "https://images.gr-assets.com/books/1388228047l/50847.jpg",
+            "url": "https://www.goodreads.com/book/show/50847.Variable_Star"
+          }
+        },
+        {
+          "x": 1959,
+          "y": 3.74,
+          "data": {
+            "title": "The Unpleasant Profession of Jonathan Hoag",
+            "numVotes": "4582",
+            "imageUrl": "https://images.gr-assets.com/books/1208563679l/50850.jpg",
+            "url": "https://www.goodreads.com/book/show/50850.The_Unpleasant_Profession_of_Jonathan_Hoag"
+          }
+        },
+        {
+          "x": 1953,
+          "y": 3.84,
+          "data": {
+            "title": "Revolt in 2100",
+            "numVotes": "4279",
+            "imageUrl": "https://images.gr-assets.com/books/1266721800l/1116661.jpg",
+            "url": "https://www.goodreads.com/book/show/1116661.Revolt_in_2100"
+          }
+        },
+        {
+          "x": 1951,
+          "y": 3.84,
+          "data": {
+            "title": "Between Planets",
+            "numVotes": "4090",
+            "imageUrl": "https://images.gr-assets.com/books/1329887630l/50854.jpg",
+            "url": "https://www.goodreads.com/book/show/50854.Between_Planets"
+          }
+        },
+        {
+          "x": 1959,
+          "y": 4.06,
+          "data": {
+            "title": "All You Zombies",
+            "numVotes": "3767",
+            "imageUrl": "https://images.gr-assets.com/books/1338513108l/13030110.jpg",
+            "url": "https://www.goodreads.com/book/show/13030110-all-you-zombies"
+          }
+        },
+        {
+          "x": 1980,
+          "y": 3.92,
+          "data": {
+            "title": "Expanded Universe",
+            "numVotes": "3820",
+            "imageUrl": "https://images.gr-assets.com/books/1390603657l/50849.jpg",
+            "url": "https://www.goodreads.com/book/show/50849.Expanded_Universe"
+          }
+        },
+        {
+          "x": 1949,
+          "y": 3.66,
+          "data": {
+            "title": "Sixth Column",
+            "numVotes": "4069",
+            "imageUrl": "https://images.gr-assets.com/books/1388291002l/342062.jpg",
+            "url": "https://www.goodreads.com/book/show/342062.Sixth_Column"
+          }
+        },
+        {
+          "x": 1942,
+          "y": 3.75,
+          "data": {
+            "title": "Beyond This Horizon",
+            "numVotes": "3867",
+            "imageUrl": "https://images.gr-assets.com/books/1330103452l/540503.jpg",
+            "url": "https://www.goodreads.com/book/show/540503.Beyond_This_Horizon"
+          }
+        },
+        {
+          "x": 1975,
+          "y": 4.06,
+          "data": {
+            "title": "The Notebooks of Lazarus Long",
+            "numVotes": "3228",
+            "imageUrl": "https://images.gr-assets.com/books/1395350028l/352.jpg",
+            "url": "https://www.goodreads.com/book/show/352.The_Notebooks_of_Lazarus_Long"
+          }
+        },
+        {
+          "x": 1953,
+          "y": 3.77,
+          "data": {
+            "title": "Assignment in Eternity",
+            "numVotes": "3296",
+            "imageUrl": "https://images.gr-assets.com/books/1388895899l/50838.jpg",
+            "url": "https://www.goodreads.com/book/show/50838.Assignment_in_Eternity"
+          }
+        },
+        {
+          "x": 1998,
+          "y": 3.96,
+          "data": {
+            "title": "Revolt in 2100/Methuselah's Children",
+            "numVotes": "3122",
+            "imageUrl": "https://images.gr-assets.com/books/1406525801l/20416.jpg",
+            "url": "https://www.goodreads.com/book/show/20416.Revolt_in_2100_Methuselah_s_Children"
+          }
+        },
+        {
+          "x": 2003,
+          "y": 3.36,
+          "data": {
+            "title": "For Us, the Living: A Comedy of Customs",
+            "numVotes": "2749",
+            "imageUrl": "https://images.gr-assets.com/books/1441767331l/50881.jpg",
+            "url": "https://www.goodreads.com/book/show/50881.For_Us_the_Living"
+          }
+        },
+        {
+          "x": 1989,
+          "y": 3.58,
+          "data": {
+            "title": "Grumbles from the Grave",
+            "numVotes": "1963",
+            "imageUrl": "https://images.gr-assets.com/books/1328488825l/46559.jpg",
+            "url": "https://www.goodreads.com/book/show/46559.Grumbles_from_the_Grave"
+          }
+        }
+      ],
+      "xAxisMin": 1941,
+      "xAxisMax": 2003,
+      "yAxisMin": "3.26",
+      "yAxisMax": "4.27",
+      "regressionData": [
+        [
+          1941,
+          "3.88"
+        ],
+        [
+          2003,
+          "3.75"
+        ]
+      ]
+    },
+    "imageUrl": "https://images.gr-assets.com/authors/1192826560p5/205.jpg",
+    "rating": "3.92",
+    "numRatings": "899150"
   }
 ]
